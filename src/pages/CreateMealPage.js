@@ -26,9 +26,9 @@ function CreateMealPage(props) {
             type,
             title,
             description, 
-            whereWhen,
-            company,       
-            user
+            whereWhen
+            /* company,       
+            user */
         }
 
         axios.post(process.env.REACT_APP_API_URL + "/meals", newMeal)
@@ -109,7 +109,7 @@ function CreateMealPage(props) {
                         onChange={(e) => setWhereWhen(e.target.value)}
                     />
                 </label> 
-                <label>
+               {/*  <label>
                 Company
                     <input
                         type="text"
@@ -128,9 +128,9 @@ function CreateMealPage(props) {
                         required={true}
                         onChange={(e) => setUser(e.target.value)}
                     />
-                </label> 
+                </label>  */}
                 
-                <button type="submit">Create meal</button>
+                <button type="submit">Create New Meal</button>
 
             </form>
 

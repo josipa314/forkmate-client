@@ -5,8 +5,16 @@ import { NavLink } from "react-router-dom";
 
 function MyMealsPage(props){
 
+    
+
   const deleteMeal = (mealId) => {
-        axios.delete(`${process.env.REACT_APP_API_URL}/meals/${mealId}`)
+
+    const storedToken = localStorage.getItem('authToken');
+
+        axios.delete(`${process.env.REACT_APP_API_URL}/meals/${mealId}`,
+        { headers: { Authorization: `Bearer ${storedToken}` } }
+        )
+
             .then(response => {
                 props.callbackUpdateMealList();
             })

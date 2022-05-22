@@ -21,6 +21,9 @@ function MealDetailsPage(props){
            <p>{details.user.name}</p> <br />
 {/*          <img src={details.image_url} alt={details.title} />
                 <br /> */}
+                <br/>
+            <p>Interested?</p>
+                <button> Let {details.user.name} know</button>
            </div>
         </>
     );

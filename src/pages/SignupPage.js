@@ -6,6 +6,8 @@ import axios from "axios";
 function SignupPage(props) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+   /*  const [name, setName] = useState("");
+    const [company, setCompany] = useState(""); */
 
     const [errorMessage, setErrorMessage] = useState(undefined);
 
@@ -14,7 +16,7 @@ function SignupPage(props) {
     const handleSignupSubmit = (e) => {
         e.preventDefault();
         
-        const requestBody = { email, password };
+        const requestBody = { email, password};
 
         axios.post(`${process.env.REACT_APP_API_URL}/auth/signup`, requestBody)
             .then((response) => {
