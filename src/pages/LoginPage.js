@@ -47,7 +47,7 @@ function LoginPage(props) {
             {errorMessage && <p className="error-message">{errorMessage}</p>}
 
             <form onSubmit={handleLoginSubmit}>
-                <label>Email:</label>
+                <label>Email: </label>
                 <input
                     type="email"
                     name="email"
@@ -55,8 +55,10 @@ function LoginPage(props) {
                     required={true}
                     onChange={(e) => setEmail(e.target.value)}
                 />
+                <br/>
+                <br/>
 
-                <label>Password:</label>
+                <label>Password: </label>
                 <input
                     type="password"
                     name="password"
@@ -64,6 +66,8 @@ function LoginPage(props) {
                     required={true}
                     onChange={(e) => setPassword(e.target.value)}
                 />
+                <br/>
+                <br/>
 
                 <button type="submit">Login</button>
             </form>

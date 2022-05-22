@@ -10,13 +10,13 @@ function Navbar(){
     return (
         <nav className="Navbar">
             <NavLink to="/">Home</NavLink> | 
-            <NavLink to="/meals">Meals of Today</NavLink> | 
-            <NavLink to="/meals/create">New Meal</NavLink> |||
+            <NavLink to="/meals">Today's Meals</NavLink> | 
+            <NavLink to="/meals/create">Add New Meal</NavLink> |||
             <NavLink to="/mymeals">My Meals</NavLink> |||
             
             { isLoggedIn &&
                 <>
-                    <span>Welcome, {user.email} </span> 
+                    <span>Welcome, {user.name} </span> 
                     <button onClick={logOutUser}>Logout</button>
                 </>
             }

@@ -28,7 +28,7 @@ function MealsListPage(props){
 
     return (
         <div className="MealsListPage">
-            <h1>List of Meals</h1>
+            <h1>Today's Meals</h1>
 
              <section>
                  { props.meals === null

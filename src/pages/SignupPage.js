@@ -6,8 +6,8 @@ import axios from "axios";
 function SignupPage(props) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-   /*  const [name, setName] = useState("");
-    const [company, setCompany] = useState(""); */
+    const [name, setName] = useState("");
+    const [company, setCompany] = useState(""); 
 
     const [errorMessage, setErrorMessage] = useState(undefined);
 
@@ -16,7 +16,7 @@ function SignupPage(props) {
     const handleSignupSubmit = (e) => {
         e.preventDefault();
         
-        const requestBody = { email, password};
+        const requestBody = { email, password, name, company};
 
         axios.post(`${process.env.REACT_APP_API_URL}/auth/signup`, requestBody)
             .then((response) => {
@@ -37,7 +37,7 @@ function SignupPage(props) {
             {errorMessage && <p className="error-message">{errorMessage}</p>}
 
             <form onSubmit={handleSignupSubmit}>
-                <label>Email:</label>
+                <label>Email: </label>
                 <input
                     type="email"
                     name="email"
@@ -45,8 +45,10 @@ function SignupPage(props) {
                     required={true}
                     onChange={(e) => setEmail(e.target.value)}
                 />
-
-                <label>Password:</label>
+                <br/>
+                <br/>
+ 
+                <label>Password: </label>
                 <input
                     type="password"
                     name="password"
@@ -54,6 +56,31 @@ function SignupPage(props) {
                     required={true}
                     onChange={(e) => setPassword(e.target.value)}
                 />
+                <br/>
+                <br/>
+
+                <label>Full Name: </label>
+                <input
+                    type="text"
+                    name="full-name"
+                    value={name}
+                    required={true}
+                    onChange={(e) => setName(e.target.value)}
+                />
+                <br/>
+                <br/>
+
+
+               <label>Company: </label>
+                <input
+                    type="text"
+                    name="company"
+                    value={company}
+                    required={true}
+                    onChange={(e) => setCompany(e.target.value)}
+                />
+                <br/>
+                <br/>
 
 
                 <button type="submit">Sign Up</button>
