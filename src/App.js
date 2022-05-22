@@ -9,6 +9,7 @@ import EditMealPage from "./pages/EditMealPage";
 import MealDetailsPage from "./pages/MealDetailsPage";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
+import MyMealsPage from "./pages/MyMealsPage"
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
     <Routes>
       <Route path='/' element={<h1>Welcome to ForkMate!</h1>} />
       <Route path='/meals' element={<MealsListPage meals={meals} callbackUpdateMealList={fetchMeals} />} />
+      <Route path='/mymeals' element={<MyMealsPage meals={meals} callbackUpdateMealList={fetchMeals} />} />
       <Route path='/meals/create' element={<CreateMealPage callbackUpdateMealList={fetchMeals} />} />
       <Route path='/meals/:mealId/edit' element={<EditMealPage meals={meals}  callbackUpdateMealList={fetchMeals} />} />
       <Route path='/meals/:mealId' element={<MealDetailsPage  meals = {meals}/>}/>

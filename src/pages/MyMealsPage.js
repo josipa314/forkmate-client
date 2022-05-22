@@ -3,8 +3,16 @@ import { NavLink } from "react-router-dom";
 /* import "./MealsListPage.css" */
 
 
-function MealsListPage(props){
+function MyMealsPage(props){
 
+  const deleteMeal = (mealId) => {
+        axios.delete(`${process.env.REACT_APP_API_URL}/meals/${mealId}`)
+            .then(response => {
+                props.callbackUpdateMealList();
+            })
+            .catch(e => console.log("error deleting meal...", e)); 
+            } 
+    
 
     const renderMeals = () => {
         const result = props.meals.map( (meal) => {
@@ -14,13 +22,14 @@ function MealsListPage(props){
                     <p>{meal.title}</p>
                     <p>{meal.description}</p>
                     <p>{meal.whereWhen}</p>
-                   
-                   
+                
+                
                     <button>
-                        <NavLink to={`/meals/${meal._id}`}>More Details</NavLink>
-                        
-                        </button>
-                  
+                    <NavLink to={`/meals/${meal._id}/edit`}>Edit This Meal</NavLink> |&nbsp;
+                    </button>
+                    <button>
+                     <a href="#" onClick={() => {deleteMeal(meal._id)}}>Delete This Meal</a>
+                   </button>
                 </div>
             )
         });
@@ -29,7 +38,7 @@ function MealsListPage(props){
 
     return (
         <div className="MealsListPage">
-            <h1>List of Meals</h1>
+            <h1>Your Meals</h1>
 
              <section>
                  { props.meals === null
@@ -42,4 +51,4 @@ function MealsListPage(props){
     );
 }
 
-export default MealsListPage;
+export default MyMealsPage;

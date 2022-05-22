@@ -12,6 +12,7 @@ function Navbar(){
             <NavLink to="/">Home</NavLink> | 
             <NavLink to="/meals">Meals of Today</NavLink> | 
             <NavLink to="/meals/create">New Meal</NavLink> |||
+            <NavLink to="/mymeals">My Meals</NavLink> |||
             
             { isLoggedIn &&
                 <>
