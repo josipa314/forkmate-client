@@ -7,7 +7,7 @@ function SignupPage(props) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
-    const [company, setCompany] = useState(""); 
+    const [company, setCompany] = useState("Netflix"); 
     const [enumCompanyvalues, setEnumCompanyvalues] = useState("");
 
     const [errorMessage, setErrorMessage] = useState(undefined);
@@ -89,7 +89,7 @@ function SignupPage(props) {
                 <br/>
 
                <label>Company: 
-                    <select name="company">
+                    <select onChange={(e) => setCompany(e.target.value)} name="company" >
                         {enumCompanyvalues.map(key => (
                         <option value={key}>{key}</option> ))}
                     </select>
