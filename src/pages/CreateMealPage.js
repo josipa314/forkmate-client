@@ -9,9 +9,9 @@ import { AuthContext } from "../context/auth.context";
 
 function CreateMealPage(props) {
 
-    const {isLoggedIn, isLoading, logOutUser} = useContext(AuthContext);
+/*     const {isLoggedIn, isLoading, logOutUser} = useContext(AuthContext); */
 
-     const [type, setType] = useState("lunch"); 
+    const [type, setType] = useState("lunch"); 
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [whereWhen, setWhereWhen] = useState("");
@@ -67,7 +67,7 @@ function CreateMealPage(props) {
     return (
        
         <section className="CreateMealPage">
-           { isLoggedIn &&  
+{/*            { isLoggedIn &&  */} 
             <><h1>Create a new meal</h1><form onSubmit={handleSubmit}>
                     {/*               <label>
                        Type:
@@ -141,7 +141,7 @@ function CreateMealPage(props) {
                     <button type="submit">Create New Meal</button>
 
                 </form></> 
-            }
+{/*             }
          { !isLoggedIn &&  
             <>
             <br/>
@@ -150,7 +150,7 @@ function CreateMealPage(props) {
                     <NavLink to="/login">Login</NavLink>
             </>
         }
-
+*/}
         </section>
     )
 }

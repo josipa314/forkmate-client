@@ -16,7 +16,7 @@ function MyMealsPage(props){
     const [myMeals, setMyMeals] = useState([]);
      const storedToken = localStorage.getItem("authToken"); 
  
-     const {isLoggedIn, isLoading, logOutUser} = useContext(AuthContext);
+/*      const {isLoggedIn, isLoading, logOutUser} = useContext(AuthContext); */
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/mymeals`, {
@@ -71,21 +71,22 @@ function MyMealsPage(props){
 
     return (
         <div className="MealsListPage">
-         { isLoggedIn &&  
-            <><h1>Your Meals</h1><section>
+{/*          { isLoggedIn &&  
+            <> */}<h1>Your Meals</h1><section>
                     {myMeals === null
                         ? <p>loading...</p>
                         : renderMeals()}
-                </section></>
+                </section>
+{/*                 </>
          }
-         { !isLoggedIn &&  
+          { !isLoggedIn &&  
             <>
             <br/>
             <br/>
                     <NavLink to="/signup">Register</NavLink> | 
                     <NavLink to="/login">Login</NavLink>
             </>
-        }
+        } */}
 
         </div>
     );
