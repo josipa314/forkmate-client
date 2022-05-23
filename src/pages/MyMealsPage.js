@@ -13,7 +13,7 @@ function MyMealsPage(props){
     /* const { user } = useContext(AuthContext);  */
 
     const [myMeals, setMyMeals] = useState([]);
-    const storedToken = localStorage.getItem("authToken");
+     const storedToken = localStorage.getItem("authToken"); 
  
 
   useEffect(() => {
