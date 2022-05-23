@@ -17,9 +17,14 @@ import ProfilePage from "./pages/ProfilePage";
 function App() {
 
   const [meals, setMeals] = useState(null);
+  const [companies, setCompanies] = useState(null)
 
   useEffect(() => {
     fetchMeals();
+  }, []);
+
+  useEffect(() => {
+    fetchCompanies();
   }, []);
 
   const fetchMeals = () => {
@@ -31,6 +36,15 @@ function App() {
       .catch(e => console.log("error getting meals from API...", e))
   }
 
+  const fetchCompanies = () => {
+    axios.get(`${process.env.REACT_APP_API_URL}/companies`)
+      .then(response => {
+        //console.log(response.data);
+        setCompanies(response.data);
+      })
+      .catch(e => console.log("error getting companies from API...", e))
+  }
+
 
   return (
     <div className="App">
@@ -39,7 +53,7 @@ function App() {
 
     <Routes>
       <Route path='/' element={<HomePage/>} />
-      <Route path='/meals' element={<MealsListPage meals={meals} callbackUpdateMealList={fetchMeals} />} />
+      <Route path='/meals' element={<MealsListPage meals={meals} companies = {companies} callbackCompanyList={fetchCompanies} callbackUpdateMealList={fetchMeals} />} />
       <Route path='/mymeals' element={<IsPrivate><MyMealsPage meals={meals} callbackUpdateMealList={fetchMeals}/></IsPrivate>} />
       <Route path='/meals/create' element={<IsPrivate><CreateMealPage callbackUpdateMealList={fetchMeals} /></IsPrivate>} />
       <Route path='/meals/:mealId/edit' element={<EditMealPage meals={meals}  callbackUpdateMealList={fetchMeals} />} />
