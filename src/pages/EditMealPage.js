@@ -16,7 +16,7 @@ function EditMealPage(props) {
     const [description, setDescription] = useState(mealDetails?.description);
     const [whereWhen, setWhereWhen] = useState(mealDetails?.whereWhen);
     const [company, setCompany] = useState(mealDetails?.company);
-    const [user, setUser] = useState(mealDetails?.user);
+    const [user, setUser] = useState(mealDetails?.user); 
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -30,7 +30,9 @@ function EditMealPage(props) {
             user
         }
 
-        axios.put(`${process.env.REACT_APP_API_URL}/meals/${mealId}`, newDetails)
+        const storedToken = localStorage.getItem('authToken');
+
+        axios.put(`${process.env.REACT_APP_API_URL}/meals/${mealId}`, newDetails,{ headers: { Authorization: `Bearer ${storedToken}` }})
             .then(response => {
                 props.callbackUpdateMealList();
                 navigate("/meals"); // redirect to meal list
@@ -92,17 +94,6 @@ function EditMealPage(props) {
                         onChange={(e) => setWhereWhen(e.target.value)}
                     />
                 </label> 
-                <label>
-                Company
-                    <input
-                        type="text"
-                        name="company"
-                        value={company}
-                        required={true}
-                        onChange={(e) => setCompany(e.target.value)}
-                    />
-                </label> 
-
 
                 <button type="submit">Update</button>
 

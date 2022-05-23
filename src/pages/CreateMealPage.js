@@ -31,7 +31,9 @@ function CreateMealPage(props) {
             user */
         }
 
-        axios.post(process.env.REACT_APP_API_URL + "/meals", newMeal)
+        const storedToken = localStorage.getItem('authToken');
+
+        axios.post(process.env.REACT_APP_API_URL + "/meals", newMeal, { headers: { Authorization: `Bearer ${storedToken}` } })
             .then(response => {
                 
                 props.callbackUpdateMealList();
@@ -77,6 +79,7 @@ function CreateMealPage(props) {
                         <option value={key}>{key}</option> ))}
                     </select>
                 </label>
+                
                 <label>
                     Title
                     <input

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { NavLink} from "react-router-dom";
+import { NavLink,useNavigate } from "react-router-dom";
 import React, { useEffect, useState} from "react";
 /* import { AuthContext } from "../context/auth.context" */
 
@@ -8,7 +8,7 @@ import React, { useEffect, useState} from "react";
 
 function MyMealsPage(props){
     
-   /*  const navigate = useNavigate(); */
+   const navigate = useNavigate();
     
     /* const { user } = useContext(AuthContext);  */
 
@@ -21,8 +21,9 @@ function MyMealsPage(props){
         headers: { Authorization: `Bearer ${storedToken}` },
       })
     .then( response => {
-        console.log(response.data)
+        //console.log(response.data)
       setMyMeals(response.data); //save into state variable
+      
       
     })
     .catch( e => console.log("error getting meals API", e))
@@ -36,9 +37,9 @@ function MyMealsPage(props){
         axios.delete(`${process.env.REACT_APP_API_URL}/meals/${mealId}`,
         { headers: { Authorization: `Bearer ${storedToken}` } }
         )
-
             .then(response => {
                 props.callbackUpdateMealList();
+                navigate("/meals"); 
             })
             .catch(e => console.log("error deleting meal...", e)); 
             } 

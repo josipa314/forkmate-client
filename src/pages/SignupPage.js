@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -8,10 +8,16 @@ function SignupPage(props) {
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
     const [company, setCompany] = useState(""); 
+    const [enumCompanyvalues, setEnumCompanyvalues] = useState("");
 
     const [errorMessage, setErrorMessage] = useState(undefined);
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        fetchEnumCompanyvalues();
+      }, []);
+
 
     const handleSignupSubmit = (e) => {
         e.preventDefault();
@@ -29,7 +35,19 @@ function SignupPage(props) {
             })
     };
 
+    const fetchEnumCompanyvalues = () => {
+        axios.get(process.env.REACT_APP_API_URL + "/company/enumcompanyvalues")
+            .then(response => {
+                console.log(response.data);
+                setEnumCompanyvalues(response.data);
+            })
+            .catch(e => console.log("error getting company from API...", e))
+    }
 
+        if (enumCompanyvalues == "") {
+                return <h1>Loading</h1>
+            }
+    
     return (
         <div className="SignupPage">
             <h1>Register</h1>
@@ -70,18 +88,14 @@ function SignupPage(props) {
                 <br/>
                 <br/>
 
-
-               <label>Company: </label>
-                <input
-                    type="text"
-                    name="company"
-                    value={company}
-                    required={true}
-                    onChange={(e) => setCompany(e.target.value)}
-                />
+               <label>Company: 
+                    <select name="company">
+                        {enumCompanyvalues.map(key => (
+                        <option value={key}>{key}</option> ))}
+                    </select>
+                </label>
                 <br/>
                 <br/>
-
 
                 <button type="submit">Sign Up</button>
             </form>

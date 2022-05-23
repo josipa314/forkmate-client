@@ -22,7 +22,7 @@ function App() {
   const fetchMeals = () => {
     axios.get(`${process.env.REACT_APP_API_URL}/meals`)
       .then(response => {
-        console.log(response.data);
+        //console.log(response.data);
         setMeals(response.data);
       })
       .catch(e => console.log("error getting meals from API...", e))
