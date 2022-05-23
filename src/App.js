@@ -11,6 +11,8 @@ import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
 import MyMealsPage from "./pages/MyMealsPage"
 import IsPrivate from "./components/Private"
+import HomePage from "./pages/HomePage";
+import ProfilePage from "./pages/ProfilePage";
 
 function App() {
 
@@ -36,12 +38,13 @@ function App() {
     <Navbar />
 
     <Routes>
-      <Route path='/' element={<h1>Welcome to ForkMate!</h1>} />
+      <Route path='/' element={<HomePage/>} />
       <Route path='/meals' element={<MealsListPage meals={meals} callbackUpdateMealList={fetchMeals} />} />
       <Route path='/mymeals' element={<IsPrivate><MyMealsPage meals={meals} callbackUpdateMealList={fetchMeals}/></IsPrivate>} />
       <Route path='/meals/create' element={<IsPrivate><CreateMealPage callbackUpdateMealList={fetchMeals} /></IsPrivate>} />
       <Route path='/meals/:mealId/edit' element={<EditMealPage meals={meals}  callbackUpdateMealList={fetchMeals} />} />
       <Route path='/meals/:mealId' element={<MealDetailsPage  meals = {meals}/>}/>
+      <Route path='/profilepage' element={<IsPrivate><ProfilePage/></IsPrivate>} />
 
       <Route path='/signup' element={<SignupPage />} />
       <Route path='/login' element={<LoginPage />} />

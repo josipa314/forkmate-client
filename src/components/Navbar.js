@@ -17,7 +17,9 @@ function Navbar(){
             { isLoggedIn &&
                 <>
                     <span>Welcome, {user.name} </span> 
+                    <NavLink to="/profilepage">Profile</NavLink> 
                     <button onClick={logOutUser}>Logout</button>
+                    
                 </>
             }
 
