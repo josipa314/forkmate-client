@@ -71,17 +71,17 @@ function MealsListPage(props){
         return filteredMeals;
       };
 
-      const filterByCompany = (filteredMeal) => {
-        // Avoid filter for null value
+       const filterByCompany = (filteredMeal) => {
+        // Avoid filter for empty string
         if (!selectedCompany) {
           return filteredMeal;
         }
     
-        const filteredCars = filteredMeal.filter(
-          (meal) => meal.company === selectedCompany
+        const filteredMeals = filteredMeal.filter(
+          (meal) => meal.company.split(" ").indexOf(selectedType) !== -1
         );
-        return filteredCars;
-      };
+        return filteredMeals;
+      }
 
       // Update seletedType state
 const handleTypeChange = (event) => {
@@ -90,14 +90,7 @@ const handleTypeChange = (event) => {
 
 
 /* const handleCompanyChange = (event) => {
-    const inputCompany = setSelectedCompany(event.target.id);
-  
-    if (inputCompany === selectedCompany) {
-      setSelectedCompany("");
-    } 
-    else {
-      setSelectedCompany(inputCompany);
-    }
+    setSelectedCompany(event.target.value);
   }; */
 
 
@@ -118,8 +111,11 @@ const handleTypeChange = (event) => {
     <option value="dinner">Dinner</option>
   </select>
 </div>
-
   </div>
+
+
+
+  
   
               <section>
                  { props.meals === null
@@ -132,9 +128,9 @@ const handleTypeChange = (event) => {
 {/* 
             <div>
     {filteredList.map((item, index) => (
-       <div className="car-item" key={index}>
-         <div className="car-name">{`Name: ${item.type}`}</div>
-         <div className="car-year">{`Title: ${item.title}`}</div>
+       <div className="item" key={index}>
+         <div className="name">{`Name: ${item.type}`}</div>
+         <div className="title">{`Title: ${item.title}`}</div>
         
 
        </div>

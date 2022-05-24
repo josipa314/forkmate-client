@@ -24,15 +24,24 @@ function ProfilePage(props) {
       .catch(e => console.log("error getting companies from API...", e))
   }
 
+/*   const details = companies.find((element) => {
+    return element._id == user.company;
+ }) */
+
+
+
     return (
       
         <div className="ProfilePage-Container">
         <h1>Your Profile</h1>
         <p>Name: {user.name}</p>
         <p>Email: {user.email}</p>
+       {/*  <p>Company: {details.name}</p> */}
+
+        
 
          
-           {companies.map((element) => {
+            {companies.map((element) => {
             if (user.company == element._id) 
             console.log(element)
             return (
@@ -44,7 +53,7 @@ function ProfilePage(props) {
 
          
            }
-           )}
+           )} 
          
 
 {/* 
