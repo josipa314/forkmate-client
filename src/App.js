@@ -14,6 +14,8 @@ import IsPrivate from "./components/Private"
 import HomePage from "./pages/HomePage";
 import ProfilePage from "./pages/ProfilePage";
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 function App() {
 
   const [meals, setMeals] = useState(null);
