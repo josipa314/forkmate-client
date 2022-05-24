@@ -36,7 +36,7 @@ function SignupPage(props) {
     };
 
     const fetchEnumCompanyvalues = () => {
-        axios.get(process.env.REACT_APP_API_URL + "/company/enumcompanyvalues")
+        axios.get(`${process.env.REACT_APP_API_URL}/company/enumcompanyvalues`)
             .then(response => {
                 console.log(response.data);
                 setEnumCompanyvalues(response.data);
