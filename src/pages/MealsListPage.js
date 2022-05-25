@@ -1,18 +1,35 @@
 import axios from "axios";
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useInsertionEffect, useState } from "react";
 /* import "./MealsListPage.css" */
 
 
 function MealsListPage(props){
 
 
-    const [filteredList, setFilteredList] = useState(props.meals);
+    const [filteredList, setFilteredList] = useState(null);
     const [selectedType, setSelectedType] = useState("");
     const [selectedCompany, setSelectedCompany] = useState("");
+    const [meals, setMeals] = useState(null)
+    
+
+    
+    useEffect(()=> {
+      axios.get(`${process.env.REACT_APP_API_URL}/meals`)
+      .then(response => {
+        /* console.log(response.data); */
+        setFilteredList(response.data);
+        setMeals(response.data)
+      })
+      .catch(e => console.log("error getting meals from API...", e))
+    }, [])
+
+
+
+
 
     useEffect(() => {
-        var filteredMeals = filterByType(props.meals);
+        var filteredMeals = filterByType(meals);
         filteredMeals = filterByCompany(filteredMeals);
         setFilteredList(filteredMeals);
       }, 
@@ -102,6 +119,10 @@ const handleCompanyChange = (event) => {
   };
 
 
+  if (filteredList == null){
+    return <h1>Loading...</h1>
+  }
+
     return (
    <>
         <div className="MealsListPage">
@@ -138,9 +159,8 @@ const handleCompanyChange = (event) => {
   
   
               <section>
-                 { props.meals === null
-                    ? <p>loading...</p>
-                    : renderMeals()
+                 {
+                    renderMeals()
                 }
              </section> 
 
