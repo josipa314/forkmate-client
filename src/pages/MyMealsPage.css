@@ -1,4 +1,15 @@
-.meal-info {
+
+  .MyMeals-Container {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 70%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .meal-summary box {
     display: inline-flex;
     
     padding-top: 1rem;

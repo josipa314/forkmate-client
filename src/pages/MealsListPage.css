@@ -1,6 +1,29 @@
-.MealsListPage .box {
+.Meals-Filter {
     border: 1px solid #333;
-    background-color: rgb(255, 254, 191);
     padding: 1rem;
     margin: 2rem;
 }
+
+.Meals-Container {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 70%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .meal-summary box {
+    display: inline-flex;
+    
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+  }
+  .meal-info2 {
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }

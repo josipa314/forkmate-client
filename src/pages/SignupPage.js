@@ -55,12 +55,10 @@ function SignupPage(props) {
     return (
         <main className="wrapper">
         <section className="container">
-            <div className="signup-form">
-            <div className="form-for-signup">
-                <div className="signup-heading">
+            <div className="signup-heading">
                 <h1>Register</h1>
-                </div>
-
+            </div>
+            <div className="signup-form">
                 {errorMessage && <p className="error-message">{errorMessage}</p>}
 
                 <form onSubmit={handleSignupSubmit}>
@@ -97,7 +95,9 @@ function SignupPage(props) {
                     <br/>
                     <br/>
 
-                <label>Company: 
+                    <label>Company: 
+                    <br/>
+                    <br/>
                         <select onChange={(e) => setCompany(e.target.value)} name="company" >
                             {enumCompanyvalues.map(key => (
                             <option value={key}>{key}</option> ))}
@@ -107,11 +107,13 @@ function SignupPage(props) {
                     <br/>
 
                     <button type="submit">Sign Up</button>
+
+                    <p>Already have account?</p>
+                    <Link to={"/login"}> Login</Link>
+
                 </form>
 
-                <p>Already have account?</p>
-                <Link to={"/login"}> Login</Link>
-            </div>
+
             </div>
         </section>
         </main>

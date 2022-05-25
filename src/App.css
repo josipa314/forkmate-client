@@ -55,7 +55,7 @@
   body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    line-height: 1.35rem;
+    line-height: 0.7rem;
     color: #2f2f2f;
     font-size: 1.1rem;
   }
@@ -67,15 +67,15 @@
 
   .container {
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     padding-bottom: 1rem;
-    margin: 2rem;
+    margin: 0.5rem;
   }
 
   /********* Typography *********/
  a {
   text-decoration: none;
-  color: #ffffff;
+  color: #1920e9;
  }
 /*  .login-form a {
    color: #08cef1;
@@ -94,8 +94,8 @@
    font-family: 'Cabin Sketch', cursive;
    font-weight: 700;
    text-align: center;
- font-size: 2.1rem;
- color: #16bac6;
+  font-size: 2.1rem;
+   color: #16bac6;
  }
 /*  .card h2 {
   
