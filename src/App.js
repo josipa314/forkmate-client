@@ -23,16 +23,14 @@ function App() {
 
   useEffect(() => {
     fetchMeals();
-  }, []);
-
-  useEffect(() => {
     fetchCompanies();
   }, []);
+
 
   const fetchMeals = () => {
     axios.get(`${process.env.REACT_APP_API_URL}/meals`)
       .then(response => {
-        console.log(response.data);
+        /* console.log(response.data); */
         setMeals(response.data);
       })
       .catch(e => console.log("error getting meals from API...", e))
@@ -60,7 +58,7 @@ function App() {
       <Route path='/mymeals' element={<IsPrivate><MyMealsPage meals={meals} callbackUpdateMealList={fetchMeals}/></IsPrivate>} />
       <Route path='/meals/create' element={<IsPrivate><CreateMealPage callbackUpdateMealList={fetchMeals} /></IsPrivate>} />
       <Route path='/meals/:mealId/edit' element={<EditMealPage meals={meals}  callbackUpdateMealList={fetchMeals} />} />
-      <Route path='/meals/:mealId' element={<MealDetailsPage  meals = {meals}/>}/>
+      <Route path='/meals/:mealId' element={<MealDetailsPage  meals = {meals} callbackUpdateMealList={fetchMeals}/>}/>
       <Route path='/profilepage' element={<IsPrivate><ProfilePage/></IsPrivate>} />
 
       <Route path='/signup' element={<SignupPage />} />

@@ -1,12 +1,14 @@
 import "../styles.css"
 import "./HomePage.css"
+import logo from "../assets/logo spining.png"
 
 function HomePage() {
 
     return (
       <>
         <div className="HomePage-Container">
-          <h1>Welcome to ForkMate!</h1>
+        <h1>Welcome to ForkMate!</h1>
+        <img src={logo} className="App-logo" alt="logo"/>
 
               <p>It's not always easy to meet coworkers in big companies. But fear not, forkmate will help you break the ice. Become a forker and look for your coforkers.</p>
 

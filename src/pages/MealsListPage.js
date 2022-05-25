@@ -1,6 +1,7 @@
 import axios from "axios";
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useInsertionEffect, useState } from "react";
+
 import "../styles.css"
 import "./MealsListPage.css"
 
@@ -8,12 +9,29 @@ import "./MealsListPage.css"
 function MealsListPage(props){
 
 
-    const [filteredList, setFilteredList] = useState(props.meals);
+    const [filteredList, setFilteredList] = useState(null);
     const [selectedType, setSelectedType] = useState("");
     const [selectedCompany, setSelectedCompany] = useState("");
+    const [meals, setMeals] = useState(null)
+    
+
+    
+    useEffect(()=> {
+      axios.get(`${process.env.REACT_APP_API_URL}/meals`)
+      .then(response => {
+        /* console.log(response.data); */
+        setFilteredList(response.data);
+        setMeals(response.data)
+      })
+      .catch(e => console.log("error getting meals from API...", e))
+    }, [])
+
+
+
+
 
     useEffect(() => {
-        var filteredMeals = filterByType(props.meals);
+        var filteredMeals = filterByType(meals);
         filteredMeals = filterByCompany(filteredMeals);
         setFilteredList(filteredMeals);
       }, 
@@ -43,6 +61,7 @@ function MealsListPage(props){
           
             return (
                 <div key={meal._id} className="meal-summary box">
+                    <p>{meal.image}</p>
                     <p>{meal.type}</p>
                     <p>{meal.title}</p>
                     <p>{meal.description}</p>
@@ -101,6 +120,10 @@ const handleCompanyChange = (event) => {
   };
 
 
+  if (filteredList == null){
+    return <h1>Loading...</h1>
+  }
+
     return (
    <>
         <div className="MealsListPage">
@@ -118,7 +141,7 @@ const handleCompanyChange = (event) => {
     <option value="dinner">Dinner</option>
   </select>
   <br/>
-  <div>Filter by type of meal:</div>
+  <div>Filter by company:</div>
   <select
     id="type-input"
     value={selectedCompany}
@@ -137,9 +160,8 @@ const handleCompanyChange = (event) => {
   
   
               <section>
-                 { props.meals === null
-                    ? <p>loading...</p>
-                    : renderMeals()
+                 {
+                    renderMeals()
                 }
              </section> 
 
