@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import {AuthContext} from "../context/auth.context"
 
-import "../styles.css"
+import "../App.css"
 import "./LoginPage.css"
 
 function LoginPage(props) {

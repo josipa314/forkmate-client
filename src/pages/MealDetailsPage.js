@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
-import "../styles.css"
+import "../App.css"
 import "./MealDetailsPage.css"
 
 function MealDetailsPage(props){

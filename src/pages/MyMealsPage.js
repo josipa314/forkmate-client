@@ -3,7 +3,7 @@ import { NavLink,useNavigate } from "react-router-dom";
 import React, { useEffect, useState} from "react";
 
 
-import "../styles.css"
+import "../App.css"
 import "./MyMealsPage.css"
 
 

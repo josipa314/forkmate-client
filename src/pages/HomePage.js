@@ -1,5 +1,6 @@
-import "../styles.css"
+import "../App.css"
 import "./HomePage.css"
+
 import logo from "../assets/logo spining.png"
 
 function HomePage() {

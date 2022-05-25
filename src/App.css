@@ -36,3 +36,76 @@
     transform: rotate(360deg);
   }
 }
+
+/* Screen size iPhone XR*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body,
+  main,
+  .container,
+ .foster,
+  .columns,
+  .pet-info,
+  .pet-info2 {
+      max-width: 100%;
+      margin: auto;
+    }
+  }
+
+/* General Styling common for all pages*/
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.35rem;
+    color: #2f2f2f;
+    font-size: 1.1rem;
+  }
+  
+  .wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .container {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 2rem;
+  }
+
+  /********* Typography *********/
+ a {
+  text-decoration: none;
+  color: #ffffff;
+ }
+/*  .login-form a {
+   color: #08cef1;
+ } */
+ h1 {
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+   font-family: 'Cabin Sketch', cursive;
+   font-weight: 700;
+   color: #16bac6;
+   font-size: 3rem;
+ }
+ h2 {
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+   font-family: 'Cabin Sketch', cursive;
+   font-weight: 700;
+   text-align: center;
+ font-size: 2.1rem;
+ color: #16bac6;
+ }
+/*  .card h2 {
+  
+     font-weight: 1000;
+     color: #007b8f;
+ } */
+ h3 {
+   margin-right: 7rem;
+   font-family: 'Open sans';
+   font-size: 1.2rem;
+   font-weight: 200;
+   margin-bottom: 1.2rem;
+ }

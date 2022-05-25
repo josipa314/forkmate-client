@@ -3,7 +3,7 @@ import { AuthContext } from "../context/auth.context";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-import "../styles.css"
+import "../App.css"
 import "./ProfilePage.css"
 
 function ProfilePage(props) {

@@ -2,19 +2,15 @@ import axios from "axios";
 import { NavLink } from "react-router-dom";
 import { useEffect, useInsertionEffect, useState } from "react";
 
-import "../styles.css"
+import "../App.css"
 import "./MealsListPage.css"
 
-
 function MealsListPage(props){
-
 
     const [filteredList, setFilteredList] = useState(null);
     const [selectedType, setSelectedType] = useState("");
     const [selectedCompany, setSelectedCompany] = useState("");
     const [meals, setMeals] = useState(null)
-    
-
     
     useEffect(()=> {
       axios.get(`${process.env.REACT_APP_API_URL}/meals`)

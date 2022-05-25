@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
-import "../styles.css"
+import "../App.css"
 import "./CreateMealPage.css"
 
 function CreateMealPage(props) {

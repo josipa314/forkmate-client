@@ -12,7 +12,7 @@
   .profile-heading {
     text-align: center;
   }
-  .uProfilePage-Container img {
+  .ProfilePage-Container img {
     height: fit-content;
     object-fit: unset;
     max-width: 30%;
