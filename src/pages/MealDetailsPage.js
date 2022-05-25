@@ -16,12 +16,13 @@ function MealDetailsPage(props){
         return (
         <>
         <div key={details._id}>
-           <p>{details.type}</p>
-           <p>{details.title}</p>
-           <p>{details.description}</p> 
-           <p>{details.whereWhen}</p>
-           <p>{details.company.name}</p>
-           <p>{details.user.name}</p> <br />
+           <p>type: {details.type}</p>
+           <p>name: {details.title}</p>
+           <p>details: {details.description}</p> 
+           <p>where&when: {details.whereWhen}</p>
+           <p>proposed by: {details.user.name}</p>
+           <p>at company: {details.company.name}</p>
+            <br />
 {/*          <img src={details.image_url} alt={details.title} />
                 <br /> */}
                 <br/>

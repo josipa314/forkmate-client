@@ -1,29 +1,24 @@
+.MealsListPage {
+  /*     border: 1px solid #333; */
+      padding: 0.5rem;
+      margin: 0.5rem;
+  }
+
 .Meals-Filter {
-    border: 1px solid #333;
-    padding: 1rem;
-    margin: 2rem;
+/*     border: 1px solid #333; */
+    padding: 0.2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
 }
+
 
 .Meals-Container {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 70%;
     margin: auto;
     margin-top: 1rem;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
     text-align: center;
-    padding-top: 1rem;
-  }
-
-  .meal-summary box {
-    display: inline-flex;
-    
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 0.5rem;
-  }
-  .meal-info2 {
-    text-align: center;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
