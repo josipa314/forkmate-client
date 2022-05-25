@@ -1,0 +1,26 @@
+.HomePage-Container {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: 'Open sans';
+    font-weight: 300;
+    float: center;
+    margin: 0rem;
+  }
+  .HomePage-Container h1 {
+   position: relative;
+    display: inline;
+    float: center;
+    margin: 0 0 0 25px;
+    font-size: 1rem;
+    list-style: none;
+    list-style: none;
+  }
+
+  .HomePage-Container p{
+    color: #21a9a7;
+    font-size: 0.7rem;
+    padding: 3px 0 3px 3px;
+    transition: all 0.15s linear 0s;
+    font-weight: 200;
+  }

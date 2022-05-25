@@ -1,0 +1,13 @@
+.meal-info {
+    display: inline-flex;
+    
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+  }
+  .meal-info2 {
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }

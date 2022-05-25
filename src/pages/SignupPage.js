@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+import "../styles.css"
+import "./SignupPage.css"
+
 
 function SignupPage(props) {
     const [email, setEmail] = useState("");
@@ -50,60 +53,69 @@ function SignupPage(props) {
             }
     
     return (
-        <div className="SignupPage">
-            <h1>Register</h1>
+        <main className="wrapper">
+        <section className="container">
+            <div className="signup-form">
+            <div className="form-for-signup">
+                <div className="signup-heading">
+                <h1>Register</h1>
+                </div>
 
-            {errorMessage && <p className="error-message">{errorMessage}</p>}
+                {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-            <form onSubmit={handleSignupSubmit}>
-                <label>Email: </label>
-                <input
-                    type="email"
-                    name="email"
-                    value={email}
-                    required={true}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-                <br/>
-                <br/>
- 
-                <label>Password: </label>
-                <input
-                    type="password"
-                    name="password"
-                    value={password}
-                    required={true}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <br/>
-                <br/>
+                <form onSubmit={handleSignupSubmit}>
+                    <label>Email: </label>
+                    <input
+                        type="email"
+                        name="email"
+                        value={email}
+                        required={true}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <br/>
+                    <br/>
+    
+                    <label>Password: </label>
+                    <input
+                        type="password"
+                        name="password"
+                        value={password}
+                        required={true}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <br/>
+                    <br/>
 
-                <label>Full Name: </label>
-                <input
-                    type="text"
-                    name="full-name"
-                    value={name}
-                    required={true}
-                    onChange={(e) => setName(e.target.value)}
-                />
-                <br/>
-                <br/>
+                    <label>Full Name: </label>
+                    <input
+                        type="text"
+                        name="full-name"
+                        value={name}
+                        required={true}
+                        onChange={(e) => setName(e.target.value)}
+                    />
+                    <br/>
+                    <br/>
 
-               <label>Company: 
-                    <select onChange={(e) => setCompany(e.target.value)} name="company" >
-                        {enumCompanyvalues.map(key => (
-                        <option value={key}>{key}</option> ))}
-                    </select>
-                </label>
-                <br/>
-                <br/>
+                <label>Company: 
+                        <select onChange={(e) => setCompany(e.target.value)} name="company" >
+                            {enumCompanyvalues.map(key => (
+                            <option value={key}>{key}</option> ))}
+                        </select>
+                    </label>
+                    <br/>
+                    <br/>
 
-                <button type="submit">Sign Up</button>
-            </form>
+                    <button type="submit">Sign Up</button>
+                </form>
 
-            <p>Already have account?</p>
-            <Link to={"/login"}> Login</Link>
-        </div>
+                <p>Already have account?</p>
+                <Link to={"/login"}> Login</Link>
+            </div>
+            </div>
+        </section>
+        </main>
+        
     )
 }
 

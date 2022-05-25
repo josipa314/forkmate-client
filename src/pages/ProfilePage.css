@@ -1,0 +1,20 @@
+/* User Profile page */
+.ProfilePage-Container {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 70%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .profile-heading {
+    text-align: center;
+  }
+  .uProfilePage-Container img {
+    height: fit-content;
+    object-fit: unset;
+    max-width: 30%;
+    margin-bottom: 3rem;
+  }

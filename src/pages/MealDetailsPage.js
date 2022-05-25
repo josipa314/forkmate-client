@@ -1,17 +1,20 @@
 import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
+import "../styles.css"
+import "./MealDetailsPage.css"
+
 function MealDetailsPage(props){
     const {mealId} = useParams();
      const mealsArr = props.meals;
      const details = mealsArr.find((meal) => {
-        return meal._id == mealId;
+    return meal._id == mealId;
      })
     console.log (details)
-   const renderDetails = () => {
-    return (
+   
+    const renderDetails = () => {
+        return (
         <>
-        
         <div key={details._id}>
            <p>{details.type}</p>
            <p>{details.title}</p>
@@ -25,15 +28,18 @@ function MealDetailsPage(props){
             <p>Interested?</p>
                 <button> Let {details.user.name} know</button>
            </div>
-           <button>
-    
-  </button>
         </>
     );
 }
       return (
         <>
-            {details ? renderDetails()  : <p>Loading...</p>}
+        <main class="wrapper">
+            <div class="container">
+                <div className="meal-info">
+                    {details ? renderDetails()  : <p>Loading...</p>}
+                </div>
+            </div>
+        </main>
         </>
     );
 }

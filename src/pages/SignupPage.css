@@ -1,0 +1,23 @@
+/* Sign up */
+* {box-sizing: border-box}
+.form-for-signup {
+  border: 1px solid #ccc;
+  display: flex;
+  width: 60%;
+} 
+
+/* Float cancel and signup buttons and add an equal width */
+ .signupbtn {
+  float: left;
+  width: 50%;
+} 
+/* Add padding to container elements */
+ .signup {
+  padding: 16px;
+  display: block;
+} 
+.signup-form {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+} 

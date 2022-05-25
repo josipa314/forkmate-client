@@ -4,6 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 
 import {AuthContext} from "../context/auth.context"
 
+import "../styles.css"
+import "./LoginPage.css"
+
 function LoginPage(props) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -42,42 +45,49 @@ function LoginPage(props) {
     };
 
     return (
-        <div className="LoginPage">
-            <h1>Login</h1>
+        <main className="wrapper">
+        <section className="container">
+            <div className="login-form">
+            <div className="login-heading">
+                <h1>Login</h1>
+            </div>
 
-            {errorMessage && <p className="error-message">{errorMessage}</p>}
+                {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-            <form onSubmit={handleLoginSubmit}>
-                <label>Email: </label>
-                <input
-                    type="email"
-                    name="email"
-                    value={email}
-                    required={true}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-                <br/>
-                <br/>
+                <form onSubmit={handleLoginSubmit}>
+                    <label>Email: </label>
+                    <input
+                        type="email"
+                        name="email"
+                        value={email}
+                        required={true}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <br/>
+                    <br/>
 
-                <label>Password: </label>
-                <input
-                    type="password"
-                    name="password"
-                    value={password}
-                    required={true}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <br/>
-                <br/>
+                    <label>Password: </label>
+                    <input
+                        type="password"
+                        name="password"
+                        value={password}
+                        required={true}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <br/>
+                    <br/>
 
-                <button type="submit">Login</button>
-            </form>
+                    <button type="submit">Login</button>
+                </form>
 
 
-            <p>Don't have an account yet?</p>
-            <Link to={"/signup"}> Sign Up</Link>
+                <p>Don't have an account yet?</p>
+                <Link to={"/signup"}> Sign Up</Link>
 
-        </div>
+            </div>
+
+        </section>
+        </main>
     )
 }
 

@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-/* import "./EditMealPage.css" */
+import "../styles.css"
+import "./EditMealPage.css"
 
 function EditMealPage(props) {
 

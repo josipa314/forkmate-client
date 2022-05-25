@@ -9,11 +9,13 @@ function Navbar(){
 
     return (
         <nav className="Navbar">
-            <NavLink to="/">Home</NavLink> | 
-            <NavLink to="/meals">Today's Meals</NavLink> | 
-            <NavLink to="/meals/create">Add New Meal</NavLink> |||
-            <NavLink to="/mymeals">My Meals</NavLink> |||
+          <ul> 
+            <li> <NavLink to="/">Home</NavLink> | </li>
+            <li> <NavLink to="/meals">Today's Meals</NavLink> | </li>
+            <li> <NavLink to="/meals/create">Add New Meal</NavLink> ||| </li>
+            <li> <NavLink to="/mymeals">My Meals</NavLink> |||</li>
             
+            <li>
             { isLoggedIn &&
                 <>
                     <span>Welcome, {user.name} </span> 
@@ -29,6 +31,8 @@ function Navbar(){
                     <NavLink to="/login">Login</NavLink>
                 </>
             }
+            </li>
+          </ul> 
         </nav>
     );
 }

@@ -4,7 +4,8 @@ import React, { useEffect, useState} from "react";
 import { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 
-/* import "./MealsListPage.css" */
+import "../styles.css"
+import "./MyMealsPage.css"
 
 
 function MyMealsPage(props){
@@ -70,6 +71,8 @@ function MyMealsPage(props){
     }
 
     return (
+      <main className="wrapper">
+      <section className="container">
         <div className="MealsListPage">
 {/*          { isLoggedIn &&  
             <> */}<h1>Your Meals</h1><section>
@@ -88,11 +91,14 @@ function MyMealsPage(props){
             </>
         } */}
 
-        <button>
-    <a href="/">Back</a>
-  </button>
+            <button>
+                <a href="/">Back</a>
+            </button>
 
         </div>
+
+        </section>
+        </main>
     );
 }
 

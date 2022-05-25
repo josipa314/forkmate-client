@@ -1,0 +1,17 @@
+.EditMealPage form {
+    text-align: center;
+    border: 1px solid #333;
+    background-color: rgb(191, 230, 255);
+    margin: 2rem 2rem 4rem;
+    padding: 1rem;
+}
+
+.EditMealPage form label {
+    display: block;
+    margin: 1rem;
+}
+
+.EditMealPage form input {
+    display: block;
+    margin: 0 auto;
+}

@@ -3,6 +3,9 @@ import { AuthContext } from "../context/auth.context";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+import "../styles.css"
+import "./ProfilePage.css"
+
 function ProfilePage(props) {
 
   const {user} = useContext(AuthContext);
@@ -30,49 +33,31 @@ function ProfilePage(props) {
     }
 
     return (
-      
+      <main className="wrapper">
+      <section className="container">
         <div className="ProfilePage-Container">
-        <h1>Your Profile</h1>
-        <p>Name: {user.name}</p>
-        <p>Email: {user.email}</p>
+            <div className="profile-heading">        
+            <h1>Your Profile</h1>
+            </div>
+            <p>Name: {user.name}</p>
+            <p>Email: {user.email}</p>
 
-        <p>Company: {companies.find((element) => user.company == element._id).name}</p>
-        <p>City: {companies.find((element) => user.company == element._id).city}</p> 
+            <p>Company: {companies.find((element) => user.company == element._id).name}</p>
+            <p>City: {companies.find((element) => user.company == element._id).city}</p>             
 
-
-        
-
-           
-
-          
-            
-            
-
-         
-         
-    
-         
-
-{/* 
+{/*
          {user.company == companies._id &&
          <> 
          <p>Company: {companies.name}</p>
           <p>City: {companies.city}</p>
-
          </> } */}
-
-         
-         
-        
-       
-
-
-        
-  <button>
-    <a href="/">Back</a>
-  </button>
-        </div>
       
+                <button>
+                  <a href="/">Back</a>
+                </button>
+          </div>
+      </section>
+      </main>
     );
   }
   

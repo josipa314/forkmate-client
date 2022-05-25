@@ -1,0 +1,32 @@
+/* Create Meal */
+.create-meal {
+    max-width: 60%;
+    text-align: left;
+  }
+.create-meal {
+    background-color: #fffeef;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    max-width: 100%;
+    flex-direction: row;
+    padding-top: 1rem;
+  }
+.create-meal form {
+    text-align: center;
+    border: 1px solid #333;
+    background-color: rgb(191, 230, 255);
+    margin: 2rem 2rem 4rem;
+    padding: 1rem;
+}
+.create-meal form label {
+    display: block;
+    margin: 1rem;
+}
+
+.create-meal form input {
+    display: block;
+    margin: 0 auto;
+}
+

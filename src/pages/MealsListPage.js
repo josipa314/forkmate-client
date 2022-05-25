@@ -1,7 +1,8 @@
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
-/* import "./MealsListPage.css" */
+import "../styles.css"
+import "./MealsListPage.css"
 
 
 function MealsListPage(props){
@@ -27,10 +28,9 @@ function MealsListPage(props){
                     <p>{meal.description}</p>
                     <p>{meal.whereWhen}</p>
                    
-                   
-                        <button>
+                     <button>
                         <NavLink to={`/meals/${meal._id}`}>More Details</NavLink>
-                        </button>
+                    </button>
                   
                 </div>
             )
@@ -47,11 +47,10 @@ function MealsListPage(props){
                     <p>{meal.title}</p>
                     <p>{meal.description}</p>
                     <p>{meal.whereWhen}</p>
-                   
-                   
-                        <button>
+                                   
+                    <button>
                         <NavLink to={`/meals/${meal._id}`}>More Details</NavLink>
-                        </button>
+                    </button>
                   
                 </div>
             )

@@ -5,7 +5,8 @@ import { NavLink } from "react-router-dom";
 
 import { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
-/* import "./CreateMealPage.css" */
+import "../styles.css"
+import "./CreateMealPage.css"
 
 function CreateMealPage(props) {
 
@@ -65,8 +66,9 @@ function CreateMealPage(props) {
             }
     
     return (
-       
-        <section className="CreateMealPage">
+        <main className="wrapper">
+          <section className="CreateMealPage" >
+            <div className="create-meal"></div>
 {/*            { isLoggedIn &&  */} 
             <><h1>Create a new meal</h1><form onSubmit={handleSubmit}>
                     {/*               <label>
@@ -152,6 +154,7 @@ function CreateMealPage(props) {
         }
 */}
         </section>
+        </main>
     )
 }
 
