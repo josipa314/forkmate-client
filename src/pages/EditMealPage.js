@@ -99,6 +99,10 @@ function EditMealPage(props) {
 
             </form>
 
+            <button>
+    <a href="/">Back</a>
+  </button>
+
         </section>
     )
 }

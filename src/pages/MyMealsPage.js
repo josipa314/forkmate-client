@@ -88,6 +88,10 @@ function MyMealsPage(props){
             </>
         } */}
 
+        <button>
+    <a href="/">Back</a>
+  </button>
+
         </div>
     );
 }

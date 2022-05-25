@@ -24,11 +24,10 @@ function ProfilePage(props) {
       .catch(e => console.log("error getting companies from API...", e))
   }
 
-/*   const details = companies.find((element) => {
-    return element._id == user.company;
- }) */
 
-
+    if (companies.length == 0) {
+      return <h1>Loading...</h1>
+    }
 
     return (
       
@@ -36,24 +35,22 @@ function ProfilePage(props) {
         <h1>Your Profile</h1>
         <p>Name: {user.name}</p>
         <p>Email: {user.email}</p>
-       {/*  <p>Company: {details.name}</p> */}
+
+        <p>Company: {companies.find((element) => user.company == element._id).name}</p>
+        <p>City: {companies.find((element) => user.company == element._id).city}</p> 
+
 
         
 
-         
-            {companies.map((element) => {
-            if (user.company == element._id) 
-            console.log(element)
-            return (
-          <>
-          <p>Company: {element.name}</p>
-          <p>City: {element.city}</p>
+           
 
-          </>) 
+          
+            
+            
 
          
-           }
-           )} 
+         
+    
          
 
 {/* 

@@ -34,9 +34,10 @@ function LoginPage(props) {
             })
             .catch((error) => {
                 // login failed
-                const errorDescription = error.response.data.message;
+                console.log(error)
+                 const errorDescription = error.response.data.message;
                 console.log("error loggin in...", errorDescription)
-                setErrorMessage(errorDescription);
+                setErrorMessage(errorDescription); 
             })
     };
 

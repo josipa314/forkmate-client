@@ -29,7 +29,8 @@ function SignupPage(props) {
                 navigate('/login');
             })
             .catch((error) => {
-                const errorDescription = error.response.data.errorMessage;
+                console.log(error)
+                const errorDescription = error.response.data.message;
                 console.log("error creating account", errorDescription)
                 setErrorMessage(errorDescription);
             })

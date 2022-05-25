@@ -14,7 +14,7 @@ import IsPrivate from "./components/Private"
 import HomePage from "./pages/HomePage";
 import ProfilePage from "./pages/ProfilePage";
 
-import 'bootstrap/dist/css/bootstrap.min.css'
+/* import 'bootstrap/dist/css/bootstrap.min.css' */
 
 function App() {
 
@@ -32,7 +32,7 @@ function App() {
   const fetchMeals = () => {
     axios.get(`${process.env.REACT_APP_API_URL}/meals`)
       .then(response => {
-        //console.log(response.data);
+        console.log(response.data);
         setMeals(response.data);
       })
       .catch(e => console.log("error getting meals from API...", e))
@@ -41,7 +41,7 @@ function App() {
   const fetchCompanies = () => {
     axios.get(`${process.env.REACT_APP_API_URL}/companies`)
       .then(response => {
-        //console.log(response.data);
+       /*  console.log(response.data); */
         setCompanies(response.data);
       })
       .catch(e => console.log("error getting companies from API...", e))

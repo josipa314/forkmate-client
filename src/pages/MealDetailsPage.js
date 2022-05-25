@@ -25,6 +25,9 @@ function MealDetailsPage(props){
             <p>Interested?</p>
                 <button> Let {details.user.name} know</button>
            </div>
+           <button>
+    
+  </button>
         </>
     );
 }

@@ -40,6 +40,7 @@ function MealsListPage(props){
 
      const renderMeals = () => {
         const result = filteredList.map((meal) => {
+          
             return (
                 <div key={meal._id} className="meal-summary box">
                     <p>{meal.type}</p>
@@ -57,7 +58,7 @@ function MealsListPage(props){
         });
         return result;
     } 
-
+    
 
     const filterByType = (filteredMeal) => {
         // Avoid filter for empty string
@@ -74,13 +75,20 @@ function MealsListPage(props){
        const filterByCompany = (filteredMeal) => {
         // Avoid filter for empty string
         if (!selectedCompany) {
+          
           return filteredMeal;
         }
-    
+
         const filteredMeals = filteredMeal.filter(
-          (meal) => meal.company.split(" ").indexOf(selectedType) !== -1
+          (meal) => meal.company.name.split(" ").indexOf(selectedCompany) !== -1
         );
         return filteredMeals;
+    
+        /* const filteredMeals = filteredMeal.filter(
+          (meal) => meal.company.name == selectedCompany
+        );
+        console.log(filteredMeals)
+        return filteredMeals; */
       }
 
       // Update seletedType state
@@ -89,9 +97,9 @@ const handleTypeChange = (event) => {
 };
 
 
-/* const handleCompanyChange = (event) => {
+const handleCompanyChange = (event) => {
     setSelectedCompany(event.target.value);
-  }; */
+  };
 
 
     return (
@@ -109,6 +117,18 @@ const handleTypeChange = (event) => {
     <option value="snack">Snack</option>
     <option value="lunch">Lunch</option>
     <option value="dinner">Dinner</option>
+  </select>
+  <br/>
+  <div>Filter by type of meal:</div>
+  <select
+    id="type-input"
+    value={selectedCompany}
+    onChange={handleCompanyChange}>
+    <option value="">All</option>
+    <option value="Netflix">Netflix</option>
+    <option value="IronHack">IronHack</option>
+    <option value="Microsoft">Microsoft</option>
+    <option value="TooGoodToGo">TooGoodToGo</option>
   </select>
 </div>
   </div>
