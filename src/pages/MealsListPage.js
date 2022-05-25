@@ -60,6 +60,7 @@ function MealsListPage(props){
           
             return (
                 <div key={meal._id} className="meal-summary box">
+                    <p>{meal.image}</p>
                     <p>{meal.type}</p>
                     <p>{meal.title}</p>
                     <p>{meal.description}</p>
@@ -140,7 +141,7 @@ const handleCompanyChange = (event) => {
     <option value="dinner">Dinner</option>
   </select>
   <br/>
-  <div>Filter by type of meal:</div>
+  <div>Filter by company:</div>
   <select
     id="type-input"
     value={selectedCompany}

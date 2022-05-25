@@ -1,10 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { NavLink } from "react-router-dom";
 
-import { useContext } from "react";
-import { AuthContext } from "../context/auth.context";
 /* import "./CreateMealPage.css" */
 
 function CreateMealPage(props) {
@@ -15,9 +12,8 @@ function CreateMealPage(props) {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [whereWhen, setWhereWhen] = useState("");
-    const [company, setCompany] = useState("");
-    const [user, setUser] = useState("");
     const [enumvalues, setEnumvalues] = useState("");
+ 
 
     const navigate = useNavigate();
 
@@ -32,7 +28,8 @@ function CreateMealPage(props) {
             type,
             title,
             description, 
-            whereWhen
+            whereWhen, 
+          
             /* company,       
             user */
         }
@@ -63,6 +60,10 @@ function CreateMealPage(props) {
         if (enumvalues == "") {
                 return <h1>Loading</h1>
             }
+
+            
+
+            
     
     return (
        
@@ -117,6 +118,8 @@ function CreateMealPage(props) {
                             required={true}
                             onChange={(e) => setWhereWhen(e.target.value)} />
                     </label>
+                   
+
                     {/*  <label>
      Company
          <input

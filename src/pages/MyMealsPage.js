@@ -1,8 +1,7 @@
 import axios from "axios";
 import { NavLink,useNavigate } from "react-router-dom";
 import React, { useEffect, useState} from "react";
-import { useContext } from "react";
-import { AuthContext } from "../context/auth.context";
+
 
 /* import "./MealsListPage.css" */
 
@@ -40,7 +39,9 @@ function MyMealsPage(props){
         { headers: { Authorization: `Bearer ${storedToken}` } }
         )
             .then(response => {
-                props.callbackUpdateMealList();
+                props.callbackUpdateMealList(); 
+                
+               
                 navigate("/meals"); 
             })
             .catch(e => console.log("error deleting meal...", e)); 
