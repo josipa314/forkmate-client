@@ -52,18 +52,18 @@ function MyMealsPage(props){
     const renderMeals = () => {
         const result = myMeals.map( (meal) => {
             return (
-                <div key={meal._id} className="meal-summary box">
-                    <p>{meal.type}</p>
-                    <p>{meal.title}</p>
-                    <p>{meal.description}</p>
-                    <p>{meal.whereWhen}</p>
+                <div key={meal._id} className="MyMeals-Container ">
+                    <p>type: {meal.type}</p>
+                    <p>name: {meal.title}</p>
+                    <p>what: {meal.description}</p>
+                    <p>where&when:{meal.whereWhen}</p>
                 
                 
                     <button>
-                    <NavLink to={`/meals/${meal._id}/edit`}>Edit This Meal</NavLink> |&nbsp;
+                    <NavLink to={`/meals/${meal._id}/edit`}>Edit</NavLink> &nbsp;
                     </button>
                     <button>
-                     <a href="#" onClick={() => {deleteMeal(meal._id)}}>Delete This Meal</a>
+                     <a href="#" onClick={() => {deleteMeal(meal._id)}}>Delete</a>
                    </button>
                 </div>
             )
@@ -74,7 +74,7 @@ function MyMealsPage(props){
     return (
       <main className="wrapper">
       <section className="container">
-        <div className="MealsListPage">
+        <div className="MyMealsContainer">
 {/*          { isLoggedIn &&  
             <> */}<h1>Your Meals</h1><section>
                     {myMeals === null
@@ -97,7 +97,6 @@ function MyMealsPage(props){
             </button>
 
         </div>
-
         </section>
         </main>
     );

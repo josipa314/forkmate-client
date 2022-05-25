@@ -35,7 +35,7 @@ function MealDetailsPage(props){
         <>
         <main class="wrapper">
             <div class="container">
-                <div className="meal-info">
+                <div className="MealDetails-Container">
                     {details ? renderDetails()  : <p>Loading...</p>}
                 </div>
             </div>

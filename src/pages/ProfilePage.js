@@ -35,10 +35,10 @@ function ProfilePage(props) {
     return (
       <main className="wrapper">
       <section className="container">
-        <div className="ProfilePage-Container">
             <div className="profile-heading">        
-            <h1>Your Profile</h1>
+              <h1>Your Profile</h1>
             </div>
+            <div className="ProfilePage-Container">
             <p>Name: {user.name}</p>
             <p>Email: {user.email}</p>
 

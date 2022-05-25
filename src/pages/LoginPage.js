@@ -47,11 +47,10 @@ function LoginPage(props) {
     return (
         <main className="wrapper">
         <section className="container">
-            <div className="login-form">
-            <div className="login-heading">
+          <div className="login-heading">
                 <h1>Login</h1>
-            </div>
-
+          </div>
+          <div className="login-form">
                 {errorMessage && <p className="error-message">{errorMessage}</p>}
 
                 <form onSubmit={handleLoginSubmit}>
@@ -84,7 +83,7 @@ function LoginPage(props) {
                 <p>Don't have an account yet?</p>
                 <Link to={"/signup"}> Sign Up</Link>
 
-            </div>
+           </div>
 
         </section>
         </main>

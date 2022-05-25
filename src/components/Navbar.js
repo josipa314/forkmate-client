@@ -21,12 +21,13 @@ function Navbar(){
             <li> <NavLink to="/">Home</NavLink></li>
             <li> <NavLink to="/meals">Today's Meals</NavLink></li>
             <li> <NavLink to="/meals/create">Add New Meal</NavLink></li>
-            <li> <NavLink to="/mymeals">My Meals</NavLink></li>
+            
             
             <li className="left-side nav">
             { isLoggedIn &&
                 <>
                     <span>Hey there, {user.name} </span> 
+                    <NavLink to="/mymeals">My Meals</NavLink> | 
                     <NavLink to="/profilepage">Profile</NavLink> 
                     <button onClick={logOutUser}>Logout</button>
                     

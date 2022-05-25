@@ -1,8 +1,25 @@
 /* Login */
 .login-form {
-    padding: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 70%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     text-align: center;
-  }
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
 .login-heading {
     text-align: center;
-  }
+}
+
+.login-form label {
+    display: block;
+    margin: 0.3rem;
+}
+
+.login-forminput {
+    display: block;
+    margin: 0 auto;
+}
