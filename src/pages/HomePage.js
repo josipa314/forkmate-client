@@ -4,41 +4,20 @@ import { NavLink } from "react-router-dom";
 import logo from "../assets/logo spining.png"
 import { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
-import background from "../assets/cafeteria-zone.jpg";
+import background from "../assets/brocolihello.png"
 
 function HomePage() {
 
-  const {isLoggedIn, user, logOutUser} = useContext(AuthContext);
+  const {isLoggedIn, user} = useContext(AuthContext);
 
     return (
       <>
         <div className="HomePage-Container">
-      {/*  style={{ backgroundImage: `url(${background})` }} */}
-
-       
-           <br/>
-           <br/>
-           <br/>
-           <br/>
-           <br/>
-           <br/>
-           <br/>
-           <br/>
-           <br/>
-           <br/>
-           <br/>
-           <br/>
-           <br/>
-           <br/>
-           <br/>
-          
-        
-       
-
-              
+    
 
               { isLoggedIn &&
                 <>
+                <img src={background} className="background-homepage" alt="background"/>
                      <p className="welcome-phrase">Hey there, {user.name} </p> 
                      <br/> 
                      <h1>Welcome back to ForkMate!</h1>
@@ -55,6 +34,7 @@ function HomePage() {
           <br/>
           <br/>
               <img src={logo} className="App-logo" alt="logo"/>
+              
               <br/>
               <br/>
              
