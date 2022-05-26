@@ -59,11 +59,11 @@ function MyMealsPage(props){
                     <p>where&when:{meal.whereWhen}</p>
                 
                 
-                    <button>
-                    <NavLink to={`/meals/${meal._id}/edit`}>Edit</NavLink> &nbsp;
+                    <button >
+                    <NavLink className="edit-button" to={`/meals/${meal._id}/edit`}>Edit</NavLink> &nbsp;
                     </button>
-                    <button>
-                     <a href="#" onClick={() => {deleteMeal(meal._id)}}>Delete</a>
+                    <button >
+                     <a className="delete-button" href="#" onClick={() => {deleteMeal(meal._id)}}>Delete</a>
                    </button>
                 </div>
             )
@@ -92,10 +92,10 @@ function MyMealsPage(props){
             </>
         } */}
 
-            <button>
+            {/* <button>
                 <a href="/">Back</a>
             </button>
-
+ */}
         </div>
         </section>
         </main>

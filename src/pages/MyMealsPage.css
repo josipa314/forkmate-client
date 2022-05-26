@@ -22,3 +22,11 @@
     flex-wrap: nowrap;
     flex-direction: column;
   }
+
+  .edit-button {
+    color: black;
+  }
+
+  .delete-button {
+    color: black;
+  }

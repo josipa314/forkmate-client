@@ -21,7 +21,7 @@ function Navbar(){
     return (
         <section className="top-nav">
         <div className="icon-container">
-        <NavLink to="/" className="icon-mother"><img src={icon} className="icon" alt="icon" /></NavLink>
+        <NavLink onClick= {() => setOpen(false)} to="/" className="icon-mother"><img src={icon} className="icon" alt="icon" /></NavLink>
     </div>
     <input id="menu-toggle" type="checkbox" />
     <label onClick={()=> setOpen(true)} className='menu-button-container' id="close-button" for="menu-toggle">

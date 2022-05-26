@@ -57,8 +57,8 @@ function MealsListPage(props){
                     <p>{meal.description}</p>
                     <p>{meal.whereWhen}</p>
                                    
-                    <button>
-                        <NavLink to={`/meals/${meal._id}`}>More Details</NavLink>
+                    <button >
+                        <NavLink className="detail-button" to={`/meals/${meal._id}`}>More Details</NavLink>
                     </button>
                 </div>
               </div>

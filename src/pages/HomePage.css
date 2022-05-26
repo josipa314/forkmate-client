@@ -31,3 +31,11 @@
     font-weight: 300;
     text-transform: lowercase;
   }
+
+  .welcome-phrase {
+  font-size:1.1rem;
+  }
+
+  .slogan {
+    font-size:1.1rem;
+  }

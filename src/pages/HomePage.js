@@ -12,8 +12,8 @@ function HomePage() {
 
     return (
       <>
-        <div className="HomePage-Container"
-       style={{ backgroundImage: `url(${background})` }}>
+        <div className="HomePage-Container">
+      {/*  style={{ backgroundImage: `url(${background})` }} */}
 
        
            <br/>
@@ -39,7 +39,8 @@ function HomePage() {
 
               { isLoggedIn &&
                 <>
-                     <p>Hey there, {user.name} </p>  
+                     <p className="welcome-phrase">Hey there, {user.name} </p> 
+                     <br/> 
                      <h1>Welcome back to ForkMate!</h1>
                     
                 </>
@@ -58,7 +59,7 @@ function HomePage() {
               <br/>
               <br/>
               <br/>
-              <p>Make friends at work and fight foodwaste</p>
+              <p className="slogan">Make friends at work and fight foodwaste</p>
 
               { isLoggedIn &&
                 <>
@@ -70,7 +71,7 @@ function HomePage() {
 
             { !isLoggedIn &&
                 <>
-                    {/* <NavLink to="/signup">Register</NavLink> |  */} */
+                    {/* <NavLink to="/signup">Register</NavLink> |  */} 
                    <li><NavLink to="/login">Login</NavLink></li>
                 </>
             }

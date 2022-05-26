@@ -52,9 +52,9 @@ function ProfilePage(props) {
           <p>City: {companies.city}</p>
          </> } */}
       
-                <button>
+                {/* <button>
                   <a href="/">Back</a>
-                </button>
+                </button> */}
           </div>
       </section>
       </main>
