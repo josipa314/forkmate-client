@@ -17,3 +17,9 @@
     max-width: 30%;
     margin-bottom: 3rem;
   }
+
+  .ProfilePage-Container p {
+    font-family:'Oswald', sans-serif;
+    font-size: medium;
+    font-weight: 400;
+  }

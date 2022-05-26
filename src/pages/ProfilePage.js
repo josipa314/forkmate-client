@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import profileIcon from "../assets/profile-icon.png"
 
 import "../App.css"
 import "./ProfilePage.css"
@@ -44,7 +45,10 @@ function ProfilePage(props) {
             <p>Email: {user.email}</p>
 
             <p>Company: {companies.find((element) => user.company == element._id).name}</p>
-            <p>City: {companies.find((element) => user.company == element._id).city}</p>             
+            <p>City: {companies.find((element) => user.company == element._id).city}</p> 
+
+            <br/>  
+            <br/>            
 
 {/*
          {user.company == companies._id &&
@@ -67,6 +71,10 @@ function ProfilePage(props) {
             } */}
 
       </section>
+
+      <div className="profile-pic">
+      <img src={profileIcon} className="App-logo" alt="logo"/>
+      </div>
       </main>
     );
   }
