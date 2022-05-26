@@ -1,0 +1,34 @@
+.about-title {
+    color: black;
+}
+
+body {
+    margin: auto;
+}
+
+.about-container .about-mission p {
+    font-family: 'Koulen', cursive;
+    text-transform: lowercase;
+    font-size: small;
+   
+
+}
+.about-mission {
+    opacity: 1;
+}
+
+.about-container {
+    max-width: 100%;
+      margin: auto;
+      background-size: cover;
+      background-repeat: repeat;
+      
+}
+
+.our-mission-container {
+    font-size: small;
+}
+
+.about-our-partners  {
+    font-size: small;
+}

@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
+import React, {useState,useEffect} from "react";
 import "./Navbar.css"
 import icon from "../assets/icon.png"
 
@@ -8,28 +9,37 @@ function Navbar(){
 
     const {isLoggedIn, isLoading, user, logOutUser} = useContext(AuthContext);
 
+    
+        const [open , setOpen] = useState(true)
+      
+        useEffect(() => {
+      if (!open){
+        document.getElementById("close-button").click()
+      }
+        },[open]); 
+
     return (
         <section className="top-nav">
         <div className="icon-container">
-        <img src={icon} className="icon" alt="icon"/>
+        <NavLink to="/" className="icon-mother"><img src={icon} className="icon" alt="icon" /></NavLink>
     </div>
     <input id="menu-toggle" type="checkbox" />
-    <label class='menu-button-container' for="menu-toggle">
+    <label onClick={()=> setOpen(true)} className='menu-button-container' id="close-button" for="menu-toggle">
         <div className="menu-button"></div>
         </label>
-          <ul class ="menu"> 
-            <li> <NavLink to="/">Home</NavLink></li>
-            <li> <NavLink to="/meals">Today's Meals</NavLink></li>
-            <li> <NavLink to="/meals/create">Add New Meal</NavLink></li>
+          <ul className ="menu"> 
+             <li> <NavLink onClick= {() => setOpen(false)} to="/about">About Us</NavLink></li> 
+            <li> <NavLink onClick= {() => setOpen(false)} to="/meals">Today's Meals</NavLink></li>
+            <li> <NavLink onClick= {() => setOpen(false)} to="/meals/create">Add New Meal</NavLink></li>
             
             
-            <li className="left-side nav">
+            
             { isLoggedIn &&
                 <>
-                    <span>Hey there, {user.name} </span> 
-                    <NavLink to="/mymeals">My Meals</NavLink> | 
-                    <NavLink to="/profilepage">Profile</NavLink> 
-                    <button onClick={logOutUser}>Logout</button>
+                    {/* <span>Hey there, {user.name} </span>  */}
+                    <li> <NavLink onClick= {() => setOpen(false)} to="/mymeals">My Meals</NavLink></li>
+                    <li>  <NavLink onClick= {() => setOpen(false)} to="/profilepage">Profile</NavLink> </li>
+                     {/* <button onClick={logOutUser}>Logout</button>  */}
                     
                 </>
             }
@@ -37,10 +47,10 @@ function Navbar(){
             { !isLoggedIn &&
                 <>
                    {/*  <NavLink to="/signup">Register</NavLink> |  */}
-                    <NavLink to="/login">Login</NavLink>
+                   <li><NavLink onClick= {() => setOpen(false)} to="/login">Login</NavLink></li>
                 </>
             }
-            </li>
+           
           </ul> 
         
         </section>

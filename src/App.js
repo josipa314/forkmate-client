@@ -12,6 +12,7 @@ import LoginPage from "./pages/LoginPage";
 import MyMealsPage from "./pages/MyMealsPage"
 import IsPrivate from "./components/Private"
 import HomePage from "./pages/HomePage";
+import AboutUs from "./pages/AboutUsPage";
 import ProfilePage from "./pages/ProfilePage";
 
 /* import 'bootstrap/dist/css/bootstrap.min.css' */
@@ -54,6 +55,7 @@ function App() {
 
     <Routes>
       <Route path='/' element={<HomePage/>} />
+      <Route path='/about' element={<AboutUs/>} />
       <Route path='/meals' element={<MealsListPage meals={meals} companies = {companies} callbackCompanyList={fetchCompanies} callbackUpdateMealList={fetchMeals} />} />
       <Route path='/mymeals' element={<IsPrivate><MyMealsPage meals={meals} callbackUpdateMealList={fetchMeals}/></IsPrivate>} />
       <Route path='/meals/create' element={<IsPrivate><CreateMealPage callbackUpdateMealList={fetchMeals} /></IsPrivate>} />

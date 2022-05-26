@@ -5,22 +5,29 @@
     font-family: 'Open sans';
     font-weight: 300;
     float: center;
-    margin: 0rem;
+    /* margin: 0rem; */
+    max-width: 100%;
+      margin: auto;
+    
   }
   .HomePage-Container h1 {
    position: relative;
     display: inline;
     float: center;
     margin: 0 0 0 25px;
-    font-size: 1rem;
+    color:black;
+    font-size: 1.4rem;
+    font-family: 'Koulen', cursive;
     list-style: none;
-    list-style: none;
+    
   }
 
   .HomePage-Container p{
-    color: #21a9a7;
-    font-size: 0.7rem;
+    color: black;
+    font-size: 0.9rem;
+    font-family: 'Indie Flower', cursive;
     padding: 3px 0 3px 3px;
     transition: all 0.15s linear 0s;
-    font-weight: 200;
+    font-weight: 300;
+    text-transform: lowercase;
   }

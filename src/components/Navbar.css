@@ -4,8 +4,9 @@ html, body {
 }
 
 * {
-  font-family: "Raleway";
+  font-family: 'Koulen', cursive;
   box-sizing: border-box;
+  
 }
 
 .top-nav {
@@ -35,11 +36,15 @@ html, body {
 }
 
 .icon {
- max-width: 15%;
+ max-width: 18%;
 }
 
+.icon-mother {
+  display: flex;
+  align-items: left
+}
 .icon-container {
-
+  
   display: flex;
   flex-direction: row;
   align-items: left;

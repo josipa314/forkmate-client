@@ -1,26 +1,84 @@
 import "../App.css"
 import "./HomePage.css"
-
+import { NavLink } from "react-router-dom";
 import logo from "../assets/logo spining.png"
+import { useContext } from "react";
+import { AuthContext } from "../context/auth.context";
+import background from "../assets/cafeteria-zone.jpg";
 
 function HomePage() {
 
+  const {isLoggedIn, user, logOutUser} = useContext(AuthContext);
+
     return (
       <>
-        <div className="HomePage-Container">
-        <h1>Welcome to ForkMate!</h1>
-        <img src={logo} className="App-logo" alt="logo"/>
+        <div className="HomePage-Container"
+       style={{ backgroundImage: `url(${background})` }}>
 
-              <p>It's not always easy to meet coworkers in big companies. But fear not, forkmate will help you break the ice. Become a forker and look for your coforkers.</p>
+       
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+          
+        
+       
 
-              <p>Did you bring too much food at work? You've organized a birthday party with your team and no one has touched the cake?<br/> You're tired of eating alone at your desk? You forgot to pack your lunch? You might not be the only one. Share it with your colleagues on ForkMate and cofork with them! </p>
+              
 
-              <p>Fight food waste while making friends at work</p>
+              { isLoggedIn &&
+                <>
+                     <p>Hey there, {user.name} </p>  
+                     <h1>Welcome back to ForkMate!</h1>
+                    
+                </>
+            }
 
-              <p>Help us spread the word by joining ForkMate</p>
-              <p>Your forkmates are waiting for you</p>
-              <p>Join the growing list of companies partering with us:
-              Netflix (city), IronHack (city), Microsoft(city), ToGoodToGo (city),</p>
+            { !isLoggedIn &&
+                <>
+                <h1>Welcome to ForkMate!</h1>
+                </>  
+            }
+          <br/>
+          <br/>
+          <br/>
+              <img src={logo} className="App-logo" alt="logo"/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <p>Make friends at work and fight foodwaste</p>
+
+              { isLoggedIn &&
+                <>
+                    
+                     <button onClick={logOutUser}>Logout</button>  
+                    
+                </>
+            }
+
+            { !isLoggedIn &&
+                <>
+                    {/* <NavLink to="/signup">Register</NavLink> |  */} */
+                   <li><NavLink to="/login">Login</NavLink></li>
+                </>
+            }
+
+
+             
+             
+             
               
         </div>
       </>
