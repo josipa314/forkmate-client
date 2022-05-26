@@ -51,7 +51,7 @@ function MealsListPage(props){
             return (
               <div className="Meals-Container ">
                 <div key={meal._id} className="meal-summary box">
-                    <p>{meal.image}</p>
+                    <p  style={{ heartIcon: `url(${heartIcon})` }}></p>
                     <p>{meal.type}</p>
                     <p>{meal.title}</p>
                     <p>{meal.description}</p>
@@ -114,6 +114,7 @@ const handleCompanyChange = (event) => {
       <>
         <div className="MealsListPage">
         <h1>Today's Meals</h1>
+
         <div className="Meals-Filter">
         <div className="Meals-Filter-Type">
           <h3>Filter by meal type:</h3>
