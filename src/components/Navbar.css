@@ -28,6 +28,7 @@ html, body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  color: #495624;
 }
 
 .menu > li {
@@ -69,7 +70,7 @@ html, body {
 .menu-button::before,
 .menu-button::after {
   display: block;
-  background-color: #2f2f2f;
+  background-color: #495624;;
   position: absolute;
   height: 4px;
   width: 30px;
@@ -114,6 +115,8 @@ html, body {
     width: 100%;
     justify-content: center;
     align-items: center;
+    color: #495624;
+
   }
   #menu-toggle ~ .menu li {
     height: 0;
