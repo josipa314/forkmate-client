@@ -30,3 +30,19 @@
     float: center;
     width: 50%;
   } 
+
+  .dropdown-menu-company {
+    min-width: 50%;
+    max-width: 70%;
+  }
+
+  .dropdown-company-container {
+    
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .login-text {
+      color: black;
+  }

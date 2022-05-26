@@ -36,6 +36,8 @@ function MealDetailsPage(props){
             <br />
            <br/>
             <p>Need extra info?</p>
+            <br />
+            
                
                 <Mailto
                 email={details.user.email}
@@ -50,6 +52,10 @@ function MealDetailsPage(props){
            <div className="picture-details">
            {/* <img src={} className="App-logo" alt="logo"/>   */}
            </div>
+           <br />
+           <br/>
+           <br />
+           <br/>
         </>
     );
 

@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 import "../App.css"
 import "./CreateMealPage.css"
+import Select from 'react-select';
 
 function CreateMealPage(props) {
 
@@ -14,6 +15,13 @@ function CreateMealPage(props) {
     const [description, setDescription] = useState("");
     const [whereWhen, setWhereWhen] = useState("");
     const [enumvalues, setEnumvalues] = useState("");
+
+    const enums = [
+        { value: 'snack', label: 'Snack' },
+        { value: 'dinner', label: "Dinner" },
+        { value: 'lunch', label: 'Lunch' },
+      ];
+    
  
     const navigate = useNavigate();
 
@@ -32,6 +40,8 @@ function CreateMealPage(props) {
             /* company,       
             user */
         }
+
+       
 
         const storedToken = localStorage.getItem('authToken');
 
@@ -56,6 +66,10 @@ function CreateMealPage(props) {
                 return <h1>Loading</h1>
             }
 
+            const handleChange = enumvalues => {
+                setEnumvalues(enumvalues.label)
+            }
+
     return (
         <main className="wrapper">
         <section className="container">
@@ -76,12 +90,25 @@ function CreateMealPage(props) {
                           onChange={(e) => setType(e.target.value)}
                       />
                   </label> */}
-                    <label> Type:  </label>
+                    {/* <label> Type:  </label>
                         <select onChange={(e) => setType(e.target.value)} name="type">
                             {enumvalues.map(key => (
                                 <option  value={key}>{key}
                                 </option>))}
-                        </select>
+                        </select> */}
+
+                        <div className="dropdown-menu-container">
+
+                        <Select
+                            placeholder="Choose a type"
+                            value={enums.value}
+                            options={enums}
+                            onChange={handleChange}
+                            className="dropdown-menu"
+                        />
+                        </div>
+
+
                     <label> Title:  </label>
                         <input
                             type="text"

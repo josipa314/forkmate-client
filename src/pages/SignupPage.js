@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Select from 'react-select';
 
 import "../App.css"
 import "./SignupPage.css"
@@ -14,6 +15,13 @@ function SignupPage(props) {
     const [enumCompanyvalues, setEnumCompanyvalues] = useState("");
 
     const [errorMessage, setErrorMessage] = useState(undefined);
+
+    const enums = [
+        { value: 'Netflix', label: 'Netflix' },
+        { value: 'Microsoft', label: "Microsoft" },
+        { value: 'TooGoodToGo', label: 'TooGoodToGo' },
+        { value: 'IronHack', label: 'IronHack' },
+      ];
 
     const navigate = useNavigate();
 
@@ -50,6 +58,10 @@ function SignupPage(props) {
 
         if (enumCompanyvalues == "") {
                 return <h1>Loading</h1>
+            }
+
+            const handleChange = enumCompanyvalues => {
+                setEnumCompanyvalues(enumCompanyvalues.label)
             }
     
     return (
@@ -92,24 +104,37 @@ function SignupPage(props) {
                         required={true}
                         onChange={(e) => setName(e.target.value)}
                     />
-                    <br/>
-                    <br/>
+                 
+                    
 
-                    <label>Company: 
+                    <label>
                     <br/>
+                    
                     <br/>
-                        <select onChange={(e) => setCompany(e.target.value)} name="company" >
+                    <div className="dropdown-company-container">
+                    <Select 
+                            placeholder="Your company"
+                            value={enums.value}
+                            options={enums}
+                            onChange={handleChange}
+                            className="dropdown-menu-company"
+                        />
+                        </div>
+                          
+                        {/* <select onChange={(e) => setCompany(e.target.value)} name="company" >
                             {enumCompanyvalues.map(key => (
                             <option value={key}>{key}</option> ))}
-                        </select>
+                        </select> */}
                     </label>
-                    <br/>
-                    <br/>
+                   
 
                     <button type="submit">Sign Up</button>
+                    <br/>
+                    <br/>
 
                     <p>Already have account?</p>
-                    <Link to={"/login"}> Login</Link>
+                    <button>
+                    <Link className="login-text" to={"/login"}> Login</Link></button>
 
                 </form>
 
