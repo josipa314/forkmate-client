@@ -83,7 +83,7 @@ function SignupPage(props) {
                         onChange={(e) => setEmail(e.target.value)}
                     />
                     <br/>
-                    <br/>
+                   
     
                     <label>Password: </label>
                     <input
@@ -94,7 +94,7 @@ function SignupPage(props) {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                     <br/>
-                    <br/>
+                    
 
                     <label>Full Name: </label>
                     <input
@@ -108,7 +108,7 @@ function SignupPage(props) {
                     
 
                     <label>
-                    <br/>
+                   
                     
                     <br/>
                     <div className="dropdown-company-container">
@@ -131,9 +131,10 @@ function SignupPage(props) {
                     <button type="submit">Sign Up</button>
                     <br/>
                     <br/>
+                    <br/>
 
-                    <p>Already have account?</p>
-                    <button>
+                    <p className="signup-question">Already have account?</p>
+                    <button className="login-button">
                     <Link className="login-text" to={"/login"}> Login</Link></button>
 
                 </form>

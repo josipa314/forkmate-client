@@ -30,5 +30,16 @@
 }
 
 .login-form button {
-    color: #2f2f2f
+    color: white;
 }
+
+.login-question {
+    font-size: medium;
+    font-weight: 500;
+}
+
+.login-button-login {
+    background-color: black;
+    
+}
+

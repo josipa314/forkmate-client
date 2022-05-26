@@ -44,5 +44,14 @@
   }
 
   .login-text {
-      color: black;
+      color: white;
+  }
+
+  .signup-question {
+      font-size: medium;
+      font-weight: 500;
+  }
+
+  .login-button {
+      background-color: black;
   }

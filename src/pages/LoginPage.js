@@ -76,11 +76,16 @@ function LoginPage(props) {
                     <br/>
                     <br/>
 
-                    <button type="submit">Login</button>
+                    <button className="login-button-login"  type="submit">Login</button>
                 </form>
 
+                <br/>
+                <br/>
+                <br/>
+                <br/>
 
-                <p>Don't have an account yet?</p>
+
+                <p className="login-question">Don't have an account yet?</p>
                 <br/>
                 <button> 
                 <Link to={"/signup"} className="signup-button"> Sign Up</Link></button>
