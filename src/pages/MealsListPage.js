@@ -115,7 +115,9 @@ const handleCompanyChange = (event) => {
         <div className="MealsListPage">
         <h1>Today's Meals</h1>
         <div className="Meals-Filter">
-          <div>Filter by type of meal:</div>
+        <div className="Meals-Filter-Type">
+          <h3>Filter by meal type:</h3>
+            <br/>
             <select
               id="type-input"
               value={selectedType}
@@ -126,7 +128,10 @@ const handleCompanyChange = (event) => {
               <option value="dinner">Dinner</option>
             </select>
           <br />
-          <div>Filter by company:</div>
+          </div>
+          <div className="Meals-Filter-Company">
+          <h3>Filter by company:</h3>
+            <br/>
             <select
               id="type-input"
               value={selectedCompany}
@@ -137,20 +142,18 @@ const handleCompanyChange = (event) => {
               <option value="Microsoft">Microsoft</option>
               <option value="TooGoodToGo">TooGoodToGo</option>
             </select>
+            </div>
         </div>
-      
-      
-       <section>
-       
+         
+       <section>   
             {renderMeals()}
-      
         </section>
         {/* 
         <div>
           {filteredList.map((item, index) => (
             <div className="item" key={index}>
-              <div className="name">{`Name: ${item.type}`}</div>
-              <div className="title">{`Title: ${item.title}`}</div>
+            <div className="name">{`Name: ${item.type}`}</div>
+            <div className="title">{`Title: ${item.title}`}</div>
        </div>    
     ))} */}
     </div>

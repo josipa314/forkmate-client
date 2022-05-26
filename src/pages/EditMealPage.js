@@ -43,12 +43,15 @@ function EditMealPage(props) {
     }
 
     return (
-        <section className="EditMealPage">
-            <h1>Edit</h1>
+        <main className="wrapper">
+        <section className="container">
+            <div className="EditMealPage-heading">
+                <h1>Edit</h1>
+            </div>
+        <div className="EditMealPage">
 
             <form onSubmit={handleSubmit}>
-            <label>
-                    Type:
+            <label>Type:  </label>
                     <input
                         type="text"
                         name="type"
@@ -56,15 +59,13 @@ function EditMealPage(props) {
                         required={true}
                         onChange={(e) => setType(e.target.value)}
                     />
-                </label>
                 {/* <label> Type:
                     <select name="type">
                         {enum.map(key => (
                         <option value={key} key={key}>{serverity[key]}</option> ))}
                     </select>
                 </label> */}
-                <label>
-                    Title
+                <label> Title: </label>
                     <input
                         type="text"
                         name="title"
@@ -72,21 +73,15 @@ function EditMealPage(props) {
                         required={true}
                         onChange={(e) => setTitle(e.target.value)}
                     />
-                </label>
-
-                <label>
-                    Description
+                <label> Description:  </label>  
                     <input
                         type="text"
                         name="description"
                         value={description}
                         required={true}
                         onChange={(e) => setDescription(e.target.value)}
-                    />
-                </label>
-
-                <label>
-                WhereWhen
+                    />       
+                <label> WhereWhen:  </label>    
                     <input
                         type="text"
                         name="whereWhen"
@@ -94,8 +89,7 @@ function EditMealPage(props) {
                         required={true}
                         onChange={(e) => setWhereWhen(e.target.value)}
                     />
-                </label> 
-
+                 
                 <button type="submit">Update</button>
 
             </form>
@@ -104,7 +98,9 @@ function EditMealPage(props) {
     <a href="/">Back</a>
   </button>
 
+        </div>
         </section>
+        </main>
     )
 }
 
