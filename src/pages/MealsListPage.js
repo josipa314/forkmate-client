@@ -1,6 +1,7 @@
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 import { useEffect, useInsertionEffect, useState } from "react";
+import heartIcon from "../assets/heart-icon.png";
 
 import "../App.css"
 import "./MealsListPage.css"
