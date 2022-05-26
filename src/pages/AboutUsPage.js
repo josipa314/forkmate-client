@@ -27,18 +27,18 @@ function AboutUs () {
         <div className="our-mission-container">
           <h2 className="about-title">Our mission</h2>
 
-          <p>
+          <p className="mission-statement2">
             Help people connect in the workplace and tackle food waste, all at
             once! Login, browse the list of meals available in your building<br/> or add one yourself. 
-            <p>Your forkmates are waiting for you.</p>
+            <h3 className="catch-phrase2">Your forkmates are waiting for you.</h3>
 
-          <p>Help us spread the word by joining ForkMate</p>
+          <p className="mission-statement">Help us spread the word by joining ForkMate</p>
           </p>
         </div>
 
         <article className="about-our-partners">
           <div className="companies-partner">
-            <p>
+            <p className="mission-statement">
               Join the growing list of companies partering with us: Netflix
               (Los Angeles), IronHack (Madrid), Microsoft(San Francisco), ToGoodToGo (Paris) and more
             </p>

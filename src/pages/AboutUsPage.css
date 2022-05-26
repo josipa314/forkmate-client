@@ -11,6 +11,7 @@
 .about-mission {
     opacity: 1;
     color: #2f2f2f;
+    padding:0 20px;
 }
 
 .about-container {
@@ -22,9 +23,30 @@
 }
 
 .our-mission-container {
-    font-size: small;
+    font-size: medium;
 }
 
 .about-our-partners  {
     font-size: small;
+}
+
+.mission-statement {
+    font-family: 'Koulen', cursive;
+    text-transform: lowercase;
+    font-size: small;
+    color: #2f2f2f;
+}
+.mission-statement2 {
+    font-family: 'Koulen', cursive;
+    text-transform: lowercase;
+    font-size: small;
+    color: #2f2f2f;
+    padding:0 20px;
+}
+
+.catch-phrase2 {
+    font-family: 'Koulen', cursive;
+    text-transform: lowercase;
+    font-size: medium;
+    color: #2f2f2f;
 }

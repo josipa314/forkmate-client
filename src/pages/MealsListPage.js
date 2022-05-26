@@ -50,18 +50,20 @@ function MealsListPage(props){
      const renderMeals = () => {
         const result = filteredList.map((meal) => {
             return (
-              <div className="Meals-Container " >
-                <div key={meal._id} className="meal-summary box">
+              <div className="mealsPage-container">
+              <div className="meals-container " >
+                <div key={meal._id} className="meal-summary-box">
                 <p><img  src={heartIcon} alt="fireSpot"/></p>
-                    <p>{meal.type}</p>
-                    <p>{meal.title}</p>
+                    <p className="type-meal">{meal.type}</p>
+                    <p className="title-meal">{meal.title}</p>
                    {/*  <p>{meal.description}</p> */}
-                    <p>{meal.whereWhen}</p>
+                    <p className="whereWhen">{meal.whereWhen}</p>
                                    
-                    <button >
+                    <button className="detail-button-container" >
                         <NavLink className="detail-button" to={`/meals/${meal._id}`}>More Details</NavLink>
                     </button>
                 </div>
+              </div>
               </div>
             )
         });
@@ -117,8 +119,8 @@ const handleCompanyChange = (event) => {
         <h1>Today's Meals</h1>
 
         <div className="Meals-Filter">
-        <div className="Meals-Filter-Type">
-          <h3>Filter by meal type:</h3>
+        <div className="meals-filter-type">
+          <h3 className="bytype">By type:</h3>
             <br/>
             <select
               id="type-input"
@@ -131,8 +133,8 @@ const handleCompanyChange = (event) => {
             </select>
           <br />
           </div>
-          <div className="Meals-Filter-Company">
-          <h3>Filter by company:</h3>
+          <div className="meals-filter-company">
+          <h3 className="bycompany">By company:</h3>
             <br/>
             <select
               id="type-input"
@@ -147,7 +149,7 @@ const handleCompanyChange = (event) => {
             </div>
         </div>
          
-       <section>   
+       <section className="meals-parent">   
             {renderMeals()}
         </section>
         {/* 

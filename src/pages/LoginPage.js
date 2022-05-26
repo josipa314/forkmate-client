@@ -81,7 +81,9 @@ function LoginPage(props) {
 
 
                 <p>Don't have an account yet?</p>
-                <Link to={"/signup"}> Sign Up</Link>
+                <br/>
+                <button> 
+                <Link to={"/signup"} className="signup-button"> Sign Up</Link></button>
 
            </div>
 

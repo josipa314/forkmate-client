@@ -57,9 +57,10 @@ function HomePage() {
               <img src={logo} className="App-logo" alt="logo"/>
               <br/>
               <br/>
-              <br/>
-              <br/>
+             
               <p className="slogan">Make friends at work and fight foodwaste</p>
+              <br/>
+              <br/>
 
               { isLoggedIn &&
                 <>
@@ -71,8 +72,10 @@ function HomePage() {
 
             { !isLoggedIn &&
                 <>
-                    {/* <NavLink to="/signup">Register</NavLink> |  */} 
-                   <li><NavLink to="/login">Login</NavLink></li>
+                   
+                   {/* <li><NavLink to="/login">Login</NavLink></li> */}
+                  
+                   
                 </>
             }
 
