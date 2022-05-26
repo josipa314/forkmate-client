@@ -8,9 +8,10 @@ import "./ProfilePage.css"
 
 function ProfilePage(props) {
 
-  const {user} = useContext(AuthContext);
+  const {isLoggedIn, user, logOutUser} = useContext(AuthContext);
   const [companies, setCompany] = useState([]);
 
+  
   useEffect(() => {
     fetchCompany();
   }, []);
@@ -56,6 +57,15 @@ function ProfilePage(props) {
                   <a href="/">Back</a>
                 </button> */}
           </div>
+
+       {/*    { isLoggedIn &&
+                <> */}
+                    
+            <button onClick={logOutUser}>Logout</button>  
+        {/*             
+                </>
+            } */}
+
       </section>
       </main>
     );

@@ -62,23 +62,13 @@ function HomePage() {
               <br/>
               <br/>
 
-              { isLoggedIn &&
-                <>
-                    
-                     <button onClick={logOutUser}>Logout</button>  
-                    
-                </>
-            }
-
+{/* 
             { !isLoggedIn &&
-                <>
-                   
-                   {/* <li><NavLink to="/login">Login</NavLink></li> */}
-                  
-                   
+                <>   
+                  <li><NavLink to="/login"><button>Login</button></NavLink></li>
                 </>
             }
-
+ */}
 
              
              
