@@ -4,22 +4,24 @@ import background from "../assets/top-view-lunchboxes-with-phone.jpg"
 function AboutUs () {
   
     return (
+      <main className="wrapper">
+      <section className="container">
       <section className="about-container">
         <div className="about-mission">
         <br/>
         <br/>
           <p className="first-p">
             It's not always easy to meet coworkers in big companies. But fear
-            not, ForkMate will help you break the ice. Become a forker and look
-            for your coforkers.
+            not, ForkMate will help you break the ice. 
           </p>
 
           <p className="second-p">
             Did you bring too much food at work? You've organized a birthday
             party with your team and no one has touched the cake?
-            <br /> You're tired of eating alone at your desk? You forgot to pack
-            your lunch? You might not be the only one. Share it with your
-            colleagues on ForkMate and cofork with them!
+            <br/> You're tired of eating alone at your desk? You forgot to pack
+            your lunch? You might not be the only one. 
+            <br/> Share it with your colleagues on ForkMate and cofork with them!
+            Become a forker and look for your coforkers.
           </p>
 
           
@@ -51,6 +53,8 @@ function AboutUs () {
         </article>
 
       </section>
+    </section>
+    </main>
     );
     
 }

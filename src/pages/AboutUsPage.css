@@ -1,5 +1,12 @@
-.about-title {
-    color: #2f2f2f;
+
+
+.about-container {
+    max-width: 100%;
+    margin: auto;
+    background-size: cover;
+    background-repeat: repeat;
+    padding: 1rem
+    
 }
 
 .about-container .about-mission p {
@@ -14,12 +21,8 @@
     padding:0 20px;
 }
 
-.about-container {
-    max-width: 100%;
-      margin: auto;
-      background-size: cover;
-      background-repeat: repeat;
-      
+.about-title {
+    color: #2f2f2f;
 }
 
 .our-mission-container {
