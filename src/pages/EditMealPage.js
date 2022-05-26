@@ -37,7 +37,7 @@ function EditMealPage(props) {
             .then(response => {
                 props.callbackUpdateMealList();
                 navigate("/meals"); // redirect to meal list
-                // navigate(`/meals/${response.data._id}`); // redirect to meal page
+                
             })
             .catch(e => console.log("error updating meal...", e));
     }
@@ -59,12 +59,7 @@ function EditMealPage(props) {
                         required={true}
                         onChange={(e) => setType(e.target.value)}
                     />
-                {/* <label> Type:
-                    <select name="type">
-                        {enum.map(key => (
-                        <option value={key} key={key}>{serverity[key]}</option> ))}
-                    </select>
-                </label> */}
+               
                 <label> Title: </label>
                     <input
                         type="text"
@@ -98,9 +93,7 @@ function EditMealPage(props) {
 
             </form>
 
-    {/*         <button>
-    <a href="/">Back</a>
-  </button> */}
+    
 
         </div>
         </section>

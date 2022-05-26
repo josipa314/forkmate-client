@@ -21,3 +21,9 @@
     flex-wrap: nowrap;
     flex-direction: column;
   }
+
+  .details-info p {
+    font-family:'Oswald', sans-serif;
+    font-size: medium;
+    font-weight: 400;
+  }
