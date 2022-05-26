@@ -50,12 +50,12 @@ function MealsListPage(props){
      const renderMeals = () => {
         const result = filteredList.map((meal) => {
             return (
-              <div className="Meals-Container ">
+              <div className="Meals-Container " >
                 <div key={meal._id} className="meal-summary box">
-                    <p  style={{ heartIcon: `url(${heartIcon})` }}></p>
+                <p><img  src={heartIcon} alt="fireSpot"/></p>
                     <p>{meal.type}</p>
                     <p>{meal.title}</p>
-                    <p>{meal.description}</p>
+                   {/*  <p>{meal.description}</p> */}
                     <p>{meal.whereWhen}</p>
                                    
                     <button >
