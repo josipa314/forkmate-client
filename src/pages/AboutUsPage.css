@@ -9,16 +9,14 @@
     
 }
 
-.about-container .about-mission p {
-    font-family: 'Koulen', cursive;
-    text-transform: lowercase;
-    font-size: small;
-    color: #2f2f2f;
-}
 .about-mission {
     opacity: 1;
     color: #2f2f2f;
     padding:0 20px;
+    font-family: 'Koulen', cursive;
+    text-transform: lowercase;
+    font-size: small;
+    color: #2f2f2f;
 }
 
 .about-title {
