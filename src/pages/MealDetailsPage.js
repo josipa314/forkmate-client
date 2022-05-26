@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+ import backgroundImg from "../assets/strawberryhello.png" 
 
 
 import "../App.css"
@@ -34,7 +34,6 @@ function MealDetailsPage(props){
            <p>Offered by: {details.user.name}</p>
            <p>Company: {details.company.name} - {details.company.city} </p>
             <br />
-           <br/>
             <p>Need extra info?</p>
             <br />
             
@@ -50,13 +49,14 @@ function MealDetailsPage(props){
               </Mailto>
            </div>
            <div className="picture-details">
-           {/* <img src={} className="App-logo" alt="logo"/>   */}
+          
            </div>
+         
            <br />
-           <br/>
-           <br />
-           <br/>
+           <img src={backgroundImg} className="background-details" alt="background-details"/> 
+           
         </>
+        
     );
 
    

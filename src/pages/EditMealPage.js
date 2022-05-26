@@ -51,14 +51,14 @@ function EditMealPage(props) {
         <div className="EditMealPage">
 
             <form onSubmit={handleSubmit}>
-            <label>Type:  </label>
+            {/* <label>Type:  </label>
                     <input
                         type="text"
                         name="type"
                         value={type}
                         required={true}
                         onChange={(e) => setType(e.target.value)}
-                    />
+                    /> */}
                
                 <label> Title: </label>
                     <input

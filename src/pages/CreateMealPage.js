@@ -6,6 +6,7 @@ import { AuthContext } from "../context/auth.context";
 import "../App.css"
 import "./CreateMealPage.css"
 import Select from 'react-select';
+import backgroundCarrot from "../assets/carrotshello.png"
 
 function CreateMealPage(props) {
 
@@ -167,6 +168,7 @@ function CreateMealPage(props) {
                         }
                 */}
                 </div>
+                <img src={backgroundCarrot} className="carrot-img" alt="carrot-img"/> 
 
         </section>
         </main>
