@@ -89,14 +89,18 @@ function EditMealPage(props) {
                         required={true}
                         onChange={(e) => setWhereWhen(e.target.value)}
                     />
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
                  
                 <button type="submit">Update</button>
 
             </form>
 
-            <button>
+    {/*         <button>
     <a href="/">Back</a>
-  </button>
+  </button> */}
 
         </div>
         </section>
