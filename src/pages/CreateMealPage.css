@@ -15,12 +15,16 @@
     margin: 0.5rem;
     color: #2f2f2f
 
-
 }
 
 .create-meal form input {
     display: block;
     margin: 0 auto;
+    height: 30px;
+}
+
+.create-meal form .description{
+    height:60px;
 }
 
 .create-meal-heading {

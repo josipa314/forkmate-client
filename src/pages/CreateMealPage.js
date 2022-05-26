@@ -90,7 +90,7 @@ function CreateMealPage(props) {
                             required={true}
                             onChange={(e) => setTitle(e.target.value)} />  
                     <label> Description:  </label>    
-                        <input
+                        <input className="description"
                             type="text"
                             name="description"
                             value={description}
