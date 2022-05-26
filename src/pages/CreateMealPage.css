@@ -13,6 +13,7 @@
 .create-meal form label {
     display: block;
     margin: 0.5rem;
+    color: #2f2f2f
 
 
 }
@@ -30,5 +31,6 @@
 .create-meal button {
     float: center;
     width: 50%;
+    color: #2f2f2f
   } 
 

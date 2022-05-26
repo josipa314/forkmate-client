@@ -17,9 +17,14 @@
 .login-form label {
     display: block;
     margin: 0.3rem;
+    color: #2f2f2f
 }
 
-.login-forminput {
+.login-form input {
     display: block;
     margin: 0 auto;
+}
+
+.login-form button {
+    color: #2f2f2f
 }

@@ -125,8 +125,10 @@ function CreateMealPage(props) {
                                 onChange={(e) => setUser(e.target.value)}
                             />
                         </label>  */}
+                        <br/>
+                        
                     <button type="submit">Create New Meal</button>
-                </form>
+                    </form>
                 {/*             }
                         { !isLoggedIn &&  
                             <>
