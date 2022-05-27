@@ -50,7 +50,7 @@
     padding-bottom: 1rem;
 }
 
-img {
+.companies-icons img {
     height: fit-content;
     object-fit:contain;
     max-width: 20%;

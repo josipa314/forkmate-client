@@ -13,8 +13,7 @@ function HomePage() {
     return (
       <>
         <div className="HomePage-Container">
-    
-
+  
               { isLoggedIn &&
                 <>
                 <br/>
@@ -22,22 +21,24 @@ function HomePage() {
                 <img src={background} className="background-homepage" alt="background"/>
                      <p className="welcome-phrase">Hey there, {user.name} </p> 
                      <br/> 
-                     <h1>Welcome back to ForkMate!</h1>
                     
+                     <h1>Welcome back to ForkMate!</h1>                    
                 </>
             }
 
             { !isLoggedIn &&
                 <>
                 <img src={background} className="background-homepage" alt="background"/>
+                <br/> 
+                <br/> 
+                <br/> 
                 <h1>Welcome to ForkMate!</h1>
                 </>  
             }
           <br/>
           <br/>
           <br/>
-              <img src={logo} className="App-logo" alt="logo"/>
-              
+              <img src={logo} className="App-logo" alt="logo"/>            
               <br/>
               <br/>
              

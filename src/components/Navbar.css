@@ -11,7 +11,7 @@ html, body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #00BAF0;
+  /* background-color: #00BAF0; */
   background: linear-gradient(to left, #F46B45, #EEA849);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #FFF;
@@ -41,7 +41,7 @@ html, body {
   display: flex;
   flex-direction: row;
   align-items: left;
-  margin-top: 3rem;
+/*   margin-top: 0.5rem; */
 }
 .menu-button-container {
   display: none;

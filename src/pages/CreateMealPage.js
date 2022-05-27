@@ -98,16 +98,6 @@ function CreateMealPage(props) {
                                 </option>))}
                         </select> */}
 
-                        <div className="dropdown-menu-container">
-
-                        <Select
-                            placeholder="Choose a type"
-                            value={enums.value}
-                            options={enums}
-                            onChange={handleChange}
-                            className="dropdown-menu"
-                        />
-                        </div>
 
 
                     <label> Title:  </label>
@@ -154,6 +144,15 @@ function CreateMealPage(props) {
                             />
                         </label>  */}
                         <br/>
+                        <div className="dropdown-menu-container">
+                            <Select
+                                placeholder="Choose a type"
+                                value={enums.value}
+                                options={enums}
+                                onChange={handleChange}
+                                className="dropdown-menu"
+                            />
+                        </div>
                         
                     <button type="submit">Create New Meal</button>
                     </form>
