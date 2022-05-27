@@ -53,18 +53,25 @@ function MyMealsPage(props){
         const result = myMeals.map( (meal) => {
             return (
                 <div key={meal._id} className="MyMeals-Container ">
-                    <p>type: {meal.type}</p>
-                    <p>name: {meal.title}</p>
-                    <p>what: {meal.description}</p>
-                    <p>where&when:{meal.whereWhen}</p>
+                    <p>Type: {meal.type}</p>
+                    <p>Title: {meal.title}</p>
+                    <p>Description: {meal.description}</p>
+                    <p>Where & When: {meal.whereWhen}</p>
                 
-                
-                    <button >
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div className="button-wrapper">
+                    <button className="edit-container">
                     <NavLink className="edit-button" to={`/meals/${meal._id}/edit`}>Edit</NavLink> &nbsp;
                     </button>
-                    <button >
+                    <button className="delete-container" >
                      <a className="delete-button" href="#" onClick={() => {deleteMeal(meal._id)}}>Delete</a>
                    </button>
+                   </div>
+                   <br/>
+                   <br/>
+                   
                 </div>
             )
         });

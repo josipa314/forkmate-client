@@ -25,10 +25,41 @@
 
   .edit-button {
     color:#2f2f2f;
+    border-radius: 5px;
   }
 
   .delete-button {
-    color: #2f2f2f;
+   
+    color: white;
   }
 
-  
+  .delete-container {
+    background-color: black;
+    border-radius: 5px;
+  }
+
+  .edit-container {
+    background-color: black;
+    border-radius: 5px;
+  }
+
+  .MyMeals-Container p {
+    font-family:'Oswald', sans-serif;
+    font-size: medium;
+    font-weight: 400;
+  }
+
+  .edit-button {
+    margin: 5px;
+    background-color: black;
+    color: white;
+  }
+
+  .delete-button {
+    margin: 5px;
+  }
+
+  .button-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+  }

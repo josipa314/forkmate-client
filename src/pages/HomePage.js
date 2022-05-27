@@ -17,6 +17,8 @@ function HomePage() {
 
               { isLoggedIn &&
                 <>
+                <br/>
+                <br/>
                 <img src={background} className="background-homepage" alt="background"/>
                      <p className="welcome-phrase">Hey there, {user.name} </p> 
                      <br/> 
@@ -27,6 +29,7 @@ function HomePage() {
 
             { !isLoggedIn &&
                 <>
+                <img src={background} className="background-homepage" alt="background"/>
                 <h1>Welcome to ForkMate!</h1>
                 </>  
             }

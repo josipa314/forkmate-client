@@ -53,7 +53,7 @@ function MealsListPage(props){
               <div className="mealsPage-container">
               <div className="meals-container " >
                 <div key={meal._id} className="meal-summary-box">
-                <p><img  src={heartIcon} alt="fireSpot"/></p>
+                <p ><img className="icon-meals" src={heartIcon} alt="fireSpot"/></p>
                     <p className="type-meal">{meal.type}</p>
                     <p className="title-meal">{meal.title}</p>
                    {/*  <p>{meal.description}</p> */}
@@ -117,6 +117,7 @@ const handleCompanyChange = (event) => {
       <>
         <div className="MealsListPage">
         <h1>Today's Meals</h1>
+        <br/>
 
         <div className="Meals-Filter">
         <div className="meals-filter-type">
@@ -148,6 +149,8 @@ const handleCompanyChange = (event) => {
             </select>
             </div>
         </div>
+        <br/>
+        <br/>
          
        <section className="meals-parent">   
             {renderMeals()}

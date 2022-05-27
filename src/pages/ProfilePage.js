@@ -47,8 +47,15 @@ function ProfilePage(props) {
             <p>Company: {companies.find((element) => user.company == element._id).name}</p>
             <p>City: {companies.find((element) => user.company == element._id).city}</p> 
 
+            <br/>
+            
+            <br/>
+
+            <button onClick={logOutUser}>Logout</button>  
+
             <br/>  
-            <br/>            
+            <br/>    
+            <br/>         
 
 {/*
          {user.company == companies._id &&
@@ -62,13 +69,6 @@ function ProfilePage(props) {
                 </button> */}
           </div>
 
-       {/*    { isLoggedIn &&
-                <> */}
-                    
-            <button onClick={logOutUser}>Logout</button>  
-        {/*             
-                </>
-            } */}
 
       </section>
 
