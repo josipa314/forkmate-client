@@ -3,29 +3,23 @@
     margin: auto;
     background-size: cover;
     background-repeat: repeat;
-    padding: 1rem
-    
+    padding: 0.3rem  
 }
 
-.about-mission {
+.about-mission img {
+    height: fit-content;
+    object-fit:contain;
+    max-width: 60%;
+  }
+
+.our-mission-container{
+    max-width: 100%;
+    margin: auto;
+    padding: 0.3rem;  
     opacity: 1;
     color: #2f2f2f;
     padding:0 20px;
-    font-family: 'Koulen', cursive;
     text-transform: lowercase;
-    font-size: small;
-    color: #2f2f2f;
-}
-
-.about-title {
-    color: #2f2f2f;
-}
-
-.our-mission-container {
-    font-size: medium;
-}
-
-.about-our-partners  {
     font-size: small;
 }
 
@@ -34,25 +28,30 @@
     text-transform: lowercase;
     font-size: small;
     color: #2f2f2f;
-}
-.mission-statement2 {
-    font-family: 'Koulen', cursive;
-    text-transform: lowercase;
-    font-size: small;
-    color: #2f2f2f;
     padding:0 20px;
 }
 
+.catch-phrase1 {
+    font-size:80%;
+}
+
 .catch-phrase2 {
-    font-family: 'Koulen', cursive;
-    text-transform: lowercase;
-    font-size: medium;
-    color: #2f2f2f;
+    font-size:110%;
+}
+
+.our-partners-container{
+    max-width: 100%;
+    margin: auto;
+    padding: 0.3rem  
+}
+.companies-icons{
+    padding:0;
+    margin: 0;
+    padding-bottom: 1rem;
 }
 
 img {
     height: fit-content;
-    object-fit: unset;
-    max-width: 30%;
-    margin-bottom: 3rem;
+    object-fit:contain;
+    max-width: 20%;
   }
