@@ -14,7 +14,6 @@
     justify-content: center;
 }
 
-
 .meals-container {
     box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.2);
     max-width:90%;
@@ -30,39 +29,39 @@
     
   }
 
-  .detail-button {
+.detail-button {
     color:#2f2f2f;
     font-size:90%;
    
   }
 
-  .detail-button-container {
+.detail-button-container {
     font-size: small;
     
   }
-  .type-meal {
+.type-meal {
     font-family:'Oswald', sans-serif;
     font-size: small;
     font-weight: 500;
   }
 
-  .title-meal {
+.title-meal {
     font-family:'Oswald', sans-serif;
     font-size: small;
     font-weight: 400;
   }
 
-  .detail-button {
+.detail-button {
     color:black
   }
 
-  .whereWhen {
+.whereWhen {
     font-family:'Oswald', sans-serif;
     font-size: small;
     font-weight: 400;
   }
 
-  .mealsPage-container {
+.mealsPage-container {
     display: flex;
     flex-direction:row;
     min-width:50%;
@@ -70,7 +69,7 @@
    
   }
 
-  .meals-parent{
+.meals-parent{
     display: flex;
     flex-wrap: wrap;
     margin: auto;

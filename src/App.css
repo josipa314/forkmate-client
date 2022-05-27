@@ -55,7 +55,7 @@
 
 /* General Styling common for all pages*/
   body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Koulen', cursive;
     font-weight: 300;
     line-height: 0.7rem;
     color: #2f2f2f;
@@ -99,7 +99,7 @@
  }
 
  h3 {
-  font-family: 'Open sans';
+  font-family: 'Koulen', cursive;
   font-size: 1rem;
   font-weight: 300;
   margin-bottom: 0.5rem;
@@ -107,7 +107,7 @@
 }
 
  p {
-   font-family: 'Open sans';
+  font-family: 'Koulen', cursive;
    font-size: 0.7rem;
    font-weight: 400;
    text-align: center;

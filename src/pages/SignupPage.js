@@ -78,6 +78,7 @@ function SignupPage(props) {
                     <input
                         type="email"
                         name="email"
+                        placeholder="jamesbond@mail.com"
                         value={email}
                         required={true}
                         onChange={(e) => setEmail(e.target.value)}
@@ -89,6 +90,7 @@ function SignupPage(props) {
                     <input
                         type="password"
                         name="password"
+                        placeholder="*******"
                         value={password}
                         required={true}
                         onChange={(e) => setPassword(e.target.value)}
@@ -100,6 +102,7 @@ function SignupPage(props) {
                     <input
                         type="text"
                         name="full-name"
+                        placeholder="james bond"
                         value={name}
                         required={true}
                         onChange={(e) => setName(e.target.value)}

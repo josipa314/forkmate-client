@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
- import backgroundImg from "../assets/strawberryhello.png" 
+import backgroundImg from "../assets/strawberryhello.png" 
 
 
 import "../App.css"
