@@ -61,7 +61,7 @@ function SignupPage(props) {
             }
 
             const handleChange = enumCompanyvalues => {
-                setEnumCompanyvalues(enumCompanyvalues.label)
+                setCompany(enumCompanyvalues.label)
             }
     
     return (
@@ -120,6 +120,7 @@ function SignupPage(props) {
                             value={enums.value}
                             options={enums}
                             onChange={handleChange}
+                    
                             className="dropdown-menu-company"
                         />
                         </div>

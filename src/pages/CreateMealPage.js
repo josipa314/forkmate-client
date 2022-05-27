@@ -18,9 +18,9 @@ function CreateMealPage(props) {
     const [enumvalues, setEnumvalues] = useState("");
 
     const enums = [
-        { value: 'snack', label: 'Snack' },
-        { value: 'dinner', label: "Dinner" },
-        { value: 'lunch', label: 'Lunch' },
+        { value: 'snack', label: 'snack' },
+        { value: 'dinner', label: "dinner" },
+        { value: 'lunch', label: 'lunch' },
       ];
     
  
@@ -68,7 +68,7 @@ function CreateMealPage(props) {
             }
 
             const handleChange = enumvalues => {
-                setEnumvalues(enumvalues.label)
+                setType(enumvalues.label)
             }
 
     return (
