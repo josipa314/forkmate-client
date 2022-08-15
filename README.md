@@ -1,4 +1,4 @@
-## This is ForkMate
+# This is ForkMate
 
 A responsive web application for companies to fight food waste and encourage socializing among coworkers in the workplace. All registered employees can log in, share food and connect. 
 
@@ -6,13 +6,13 @@ A responsive web application for companies to fight food waste and encourage soc
 
 <br/>
 
-# Link to the server repository
+## Link to the server repository
 
 https://github.com/josipa314/forkmate-server
 
 <br/>
 
-# Technologies used
+## Technologies used
 
 Javascript, MongoDB, Express.js, React.js, Axios, Node.js, REST APIs, HTML, CSS
 
@@ -20,7 +20,7 @@ Deployed on Netlify
 
 <br/>
 
-**Project Link**
+## Project Link**
 
 https://project-forkmate.netlify.app/
 
