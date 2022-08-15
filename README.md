@@ -20,7 +20,7 @@ Deployed on Netlify
 
 <br/>
 
-## Project Link**
+## Project Link
 
 https://project-forkmate.netlify.app/
 
