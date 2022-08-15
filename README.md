@@ -1,3 +1,32 @@
+**ForkMate** 
+
+A responsive web application for companies to fight food waste and encourage socializing among coworkers in the workplace. All registered employees can log in, share food and connect. 
+
+"Connect in your workplace and tackle food waste, all at once. Become a coforker!"
+
+
+**Link to the server repo**
+
+https://github.com/josipa314/forkmate-server
+
+
+**Technologies used**
+
+Javascript, MongoDB, Express.js, React.js, Axios, Node.js, REST APIs, HTML, CSS
+
+Deployed on Netlify
+
+
+**Project Link**
+
+https://project-forkmate.netlify.app/
+
+
+
+-----
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
