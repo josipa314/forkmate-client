@@ -1,66 +1,61 @@
-import "../App.css"
-import "./HomePage.css"
-import { NavLink } from "react-router-dom";
-import logo from "../assets/logo spining.png"
+import "../App.css";
+import "./HomePage.css";
+import logo from "../assets/logo spining.png";
 import { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
-import background from "../assets/brocolihello.png"
+import background from "../assets/brocolihello1.png";
 
 function HomePage() {
+  const { isLoggedIn, user } = useContext(AuthContext);
 
-  const {isLoggedIn, user} = useContext(AuthContext);
+  return (
+    <>
+      <div className="HomePage-Container">
+        {isLoggedIn && (
+          <>
+            <br />
+            <br />
+            <img
+              src={background}
+              className="background-homepage"
+              alt="background"
+            />
+            <p className="welcome-phrase">Hey there, {user.name} </p>
+            <br />
 
-    return (
-      <>
-        <div className="HomePage-Container">
-  
-              { isLoggedIn &&
-                <>
-                <br/>
-                <br/>
-                <img src={background} className="background-homepage" alt="background"/>
-                     <p className="welcome-phrase">Hey there, {user.name} </p> 
-                     <br/> 
-                    
-                     <h1>Welcome back to ForkMate!</h1>                    
-                </>
-            }
+            <h1>Welcome back to ForkMate!</h1>
+          </>
+        )}
 
-            { !isLoggedIn &&
-                <>
-                <img src={background} className="background-homepage" alt="background"/>
-                <br/> 
-                <br/> 
-                <br/> 
-                <h1>Welcome to ForkMate!</h1>
-                </>  
-            }
-          <br/>
-          <br/>
-          <br/>
-              <img src={logo} className="App-logo" alt="logo"/>            
-              <br/>
-              <br/>
-             
-              <p className="slogan">Make friends at work and fight foodwaste</p>
-              <br/>
-              <br/>
+        {!isLoggedIn && (
+          <>
+            <br />
 
-{/* 
-            { !isLoggedIn &&
-                <>   
-                  <li><NavLink to="/login"><button>Login</button></NavLink></li>
-                </>
-            }
- */}
+            <img
+              src={background}
+              className="background-homepage"
+              alt="background"
+            />
+            <br />
+            <br />
 
-             
-             
-             
-              
-        </div>
-      </>
-    );
-  }
-  
-  export default HomePage;
+            <h1>Welcome to ForkMate!</h1>
+          </>
+        )}
+        <br />
+        <br />
+        <br />
+
+        <img src={logo} className="App-logo" alt="logo" />
+        <br />
+        <br />
+
+        <p className="slogan">Make friends at work and fight foodwaste</p>
+        <br />
+        <br />
+      </div>
+    </>
+  );
+}
+
+export default HomePage;

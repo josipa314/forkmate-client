@@ -11,11 +11,9 @@ html, body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  /* background-color: #00BAF0; */
   background: linear-gradient(to left, #F46B45, #EEA849);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #FFF;
-  height: 50px;
+  height: 80px;
   padding: 1em;
 }
 .menu {
@@ -29,9 +27,13 @@ html, body {
 .menu > li {
   margin: 0 1rem;
   overflow: hidden;
+  padding: 2px;
 }
+
+
+
 .icon {
- max-width: 18%;
+ max-width: 25%;
 }
 .icon-mother {
   display: flex;
@@ -41,12 +43,12 @@ html, body {
   display: flex;
   flex-direction: row;
   align-items: left;
-/*   margin-top: 0.5rem; */
+
 }
 .menu-button-container {
   display: none;
   height: 100%;
-  width: 30px;
+  width: 50px;
   cursor: pointer;
   flex-direction: column;
   justify-content: center;
@@ -85,7 +87,7 @@ html, body {
   margin-top: 0px;
   transform: rotate(-405deg);
 }
-@media (max-width: 480px) {
+@media (max-width: 754px) {
   .menu-button-container {
     display: flex;
   }
